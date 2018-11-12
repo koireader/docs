@@ -3,8 +3,9 @@ title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - Shell
-  - 
-  # - ruby
+  - Node.js
+  - Python
+  #- ruby
   # - python
   # - javascript
 
@@ -20,7 +21,7 @@ search: true
 
 # Introduction
 
-Welcome to the KoiReader API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to the KoiReader API! You can use our API to access KoiReader API endpoints, which can get context from documents.
 
 We have language bindings in Shell, Node.js, Python. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
@@ -54,9 +55,9 @@ const kittn = require('kittn');
 let api = kittn.authorize('meowmeowmeow');
 ``` -->
 
-> Make sure to replace `APIKEY` with your API key and `PATH` with your file path.
+> Make sure to replace <code>APIKEY</code> with your API key and <code>PATH</code> with your file path.
 
-KoiReader uses API keys to allow access to the API. You can register a new KoiReader API key at our [developer portal](https://www.dev.koireader.com  ).
+KoiReader uses API keys to allow access to the API. You can register a new KoiReader API key at our [developer portal](https://dev.koireader.com).
 
 KoiReader expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
@@ -64,26 +65,26 @@ KoiReader expects for the API key to be included in all API requests to the serv
 `X-ApiKey: APIKEY`
 
 <aside class="notice">
-<p>You must replace <code>APIKEY</code> with your personal API key 
+<p style="display:inline-block; width: 95%; vertical-align:top;">You must replace <code>APIKEY</code> with your personal API key 
   and <code>PATH</code> with your image path</p>
 </aside>
 
 # KoiReader
 
-## Get All Kittens
+## Get Context From Documents
 <!-- 
 ```ruby
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
+api.KoiReaders.get
 ```
 
 ```python
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
+api.KoiReaders.get()
 ``` -->
 
 ```shell
@@ -96,7 +97,7 @@ curl -X POST   https://api.koireader.io/demo
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+let KoiReaders = api.KoiReaders.get();
 ``` -->
 
 > The above command returns JSON structured like this:
@@ -252,9 +253,9 @@ let kittens = api.kittens.get();
     }
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves context and text from the documents .
 
-### HTTP Request
+### HTTPS Request
 
 `POST   https://api.koireader.io/demo`
 
@@ -263,30 +264,30 @@ This endpoint retrieves all kittens.
 Parameter | Default | Description
 --------- | ------- | -----------
 include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+available | true | If set to false, the result will include KoiReaders that have already been adopted.
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Remember — to use an authenticated KoiReader!
 </aside>
 
-<!-- ## Get a Specific Kitten
+<!-- ## Get a Specific KoiReader
 
 ```ruby
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
+api.KoiReaders.get(2)
 ```
 
 ```python
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
+api.KoiReaders.get(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "http://example.com/api/KoiReaders/2"
   -H "Authorization: meowmeowmeow"
 ```
 
@@ -294,7 +295,7 @@ curl "http://example.com/api/kittens/2"
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+let max = api.KoiReaders.get(2);
 ```
 
 > The above command returns JSON structured like this:
@@ -309,38 +310,38 @@ let max = api.kittens.get(2);
 }
 ```
 
-This endpoint retrieves a specific kitten.
+This endpoint retrieves a specific KoiReader.
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET http://example.com/KoiReaders/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to retrieve
+ID | The ID of the KoiReader to retrieve
 
-## Delete a Specific Kitten
+## Delete a Specific KoiReader
 
 ```ruby
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
+api.KoiReaders.delete(2)
 ```
 
 ```python
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
+api.KoiReaders.delete(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "http://example.com/api/KoiReaders/2"
   -X DELETE
   -H "Authorization: meowmeowmeow"
 ```
@@ -349,7 +350,7 @@ curl "http://example.com/api/kittens/2"
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
+let max = api.KoiReaders.delete(2);
 ```
 
 > The above command returns JSON structured like this:
@@ -361,15 +362,15 @@ let max = api.kittens.delete(2);
 }
 ```
 
-This endpoint deletes a specific kitten.
+This endpoint deletes a specific KoiReader.
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
+`DELETE http://example.com/KoiReaders/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to delete -->
+ID | The ID of the KoiReader to delete -->
 

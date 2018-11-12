@@ -76,6 +76,8 @@ html, body {
     display: block;
     max-width: 100%;
     margin-bottom: $logo-margin;
+    width: 50px;
+    margin: 10px auto;
   }
 
   &>.search {
@@ -449,7 +451,8 @@ html, body {
   }
 
   code {
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(128,128,128,1) /*rgba(0,0,0,0.05)*/;
+    color : rgba(255,255,255,1);
     padding: 3px;
     border-radius: 3px;
     @extend %break-words;
