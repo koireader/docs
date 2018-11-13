@@ -2,15 +2,14 @@
 title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - Shell
-  - Node.js
-  - Python
+  - shell
+  - node.js
   #- ruby
-  # - python
+  - python
   # - javascript
 
 toc_footers:
-  # - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='#'>Sign Up for a Developer Key</a>
   # - <a href='https://github.com/lord/KoiReader'>Documentation Powered by KoiReader</a>
 
 includes:
@@ -21,7 +20,7 @@ search: true
 
 # Introduction
 
-Welcome to the KoiReader API! You can use our API to access KoiReader API endpoints, which can get context from documents.
+Welcome to the KoiReader API! You can use our API to access KoiReader endpoints, which can get context from documents.
 
 We have language bindings in Shell, Node.js, Python. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
@@ -39,11 +38,11 @@ We have language bindings in Shell, Node.js, Python. You can view code examples 
     -H 'X-ApiKey: APIKEY' -F 'file=@PATH'
 ```
  
-<!-- ```python
+```python
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
-``` -->
+``` 
 <!-- ```ruby
 require 'kittn'
 
@@ -65,7 +64,7 @@ KoiReader expects for the API key to be included in all API requests to the serv
 `X-ApiKey: APIKEY`
 
 <aside class="notice">
-<p style="display:inline-block; width: 95%; vertical-align:top;">You must replace <code>APIKEY</code> with your personal API key 
+<p style="display:inline-block; width: 94%; vertical-align:top;">You must replace <code>APIKEY</code> with your personal API key 
   and <code>PATH</code> with your image path</p>
 </aside>
 
@@ -79,13 +78,14 @@ require 'kittn'
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 api.KoiReaders.get
 ```
+-->
 
 ```python
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
 api.KoiReaders.get()
-``` -->
+``` 
 
 ```shell
 curl -X POST   https://api.koireader.io/demo  
@@ -267,7 +267,7 @@ include_cats | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include KoiReaders that have already been adopted.
 
 <aside class="success">
-Remember — to use an authenticated KoiReader!
+Remember — to use an authenticated KoiReader API !
 </aside>
 
 <!-- ## Get a Specific KoiReader
@@ -291,7 +291,7 @@ curl "http://example.com/api/KoiReaders/2"
   -H "Authorization: meowmeowmeow"
 ```
 
-```javascript
+ ```javascript
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
@@ -372,5 +372,5 @@ This endpoint deletes a specific KoiReader.
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the KoiReader to delete -->
-
+ID | The ID of the KoiReader to delete 
+ -->

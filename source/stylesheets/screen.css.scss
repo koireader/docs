@@ -488,7 +488,9 @@ html, body {
   }
 
   aside.notice:before {
-    @extend %icon-info-sign;
+    // @extend %icon-info-sign;
+    font-family: 'Material Icons';
+    content: "info";
   }
 
   aside.warning:before {
@@ -496,7 +498,9 @@ html, body {
   }
 
   aside.success:before {
-    @extend %icon-ok-sign;
+    // @extend %icon-ok-sign;
+    font-family: 'Material Icons';
+    content: "check_circle";
   }
 
   .search-highlight {
