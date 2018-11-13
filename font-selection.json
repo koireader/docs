@@ -102,7 +102,7 @@
 	],
 	"height": 1024,
 	"metadata": {
-		"name": "slate",
+		"name": "Material Icons",
 		"license": "SIL OFL 1.1"
 	},
 	"preferences": {
@@ -113,7 +113,7 @@
 		"fontPref": {
 			"prefix": "icon-",
 			"metadata": {
-				"fontFamily": "slate",
+				"fontFamily": "Material Icons",
 				"majorVersion": 1,
 				"minorVersion": 0,
 				"description": "Based on FontAwesome",

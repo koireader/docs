@@ -2,14 +2,14 @@
 title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
-  - node.js
+  - shell : Shell
+  - javascript : Node.js
   #- ruby
-  - python
+  - python : Python
   # - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='https://dev.koireader.com' target="_blank">Sign Up for a Developer Key</a>
   # - <a href='https://github.com/lord/KoiReader'>Documentation Powered by KoiReader</a>
 
 includes:
@@ -37,22 +37,24 @@ We have language bindings in Shell, Node.js, Python. You can view code examples 
     -H 'content-type: multipart/form-data' 
     -H 'X-ApiKey: APIKEY' -F 'file=@PATH'
 ```
+
  
 ```python
 import kittn
 
 api = kittn.authorize('meowmeowmeow')
+```
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
 ``` 
 <!-- ```ruby
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 ``` -->
-<!-- ```javascript
-const kittn = require('kittn');
 
-let api = kittn.authorize('meowmeowmeow');
-``` -->
 
 > Make sure to replace <code>APIKEY</code> with your API key and <code>PATH</code> with your file path.
 
@@ -79,6 +81,17 @@ api = Kittn::APIClient.authorize!('meowmeowmeow')
 api.KoiReaders.get
 ```
 -->
+```shell
+curl -X POST   https://api.koireader.io/demo  
+  -H 'content-type: multipart/form-data'  
+  -H 'X-ApiKey: APIKEY' -F 'file=@PATH'
+```
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+let KoiReaders = api.KoiReaders.get();
+```
 
 ```python
 import kittn
@@ -87,18 +100,8 @@ api = kittn.authorize('meowmeowmeow')
 api.KoiReaders.get()
 ``` 
 
-```shell
-curl -X POST   https://api.koireader.io/demo  
-  -H 'content-type: multipart/form-data'  
-  -H 'X-ApiKey: APIKEY' -F 'file=@PATH'
-```
-<!-- 
-```javascript
-const kittn = require('kittn');
 
-let api = kittn.authorize('meowmeowmeow');
-let KoiReaders = api.KoiReaders.get();
-``` -->
+
 
 > The above command returns JSON structured like this:
 
