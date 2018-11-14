@@ -101,7 +101,9 @@ html, body {
       top: 17px;
       left: $nav-padding;
       color: $nav-text;
-      @extend %icon-search;
+      // @extend %icon-search;
+      font-family: 'Material Icons';
+      content: "search";
     }
   }
 
