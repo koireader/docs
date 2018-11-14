@@ -482,6 +482,7 @@ html, body {
     &.success {
       background-color: $aside-success-bg;
     }
+    
   }
 
   aside:before {
@@ -494,6 +495,12 @@ html, body {
     // @extend %icon-info-sign;
     font-family: 'Material Icons';
     content: "info";
+  }
+  aside.notice p,
+  aside.success p {
+    display:inline-block; 
+    width: 94%; 
+    vertical-align:top;        
   }
 
   aside.warning:before {
@@ -574,7 +581,6 @@ html, body {
       left: 0;
     }
   }
-
   .page-wrapper {
     margin-left: 0;
   }
@@ -614,6 +620,9 @@ html, body {
   %right-col + %left-col {
     margin-top: $main-padding;
   }
+  
+  .content aside.notice p, 
+  .content aside.success p { width: 90%; }
 }
 
 .highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {

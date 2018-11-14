@@ -66,7 +66,7 @@ KoiReader expects for the API key to be included in all API requests to the serv
 `X-ApiKey: APIKEY`
 
 <aside class="notice">
-<p style="display:inline-block; width: 94%; vertical-align:top;">You must replace <code>APIKEY</code> with your personal API key 
+<p class = 'notice-para'>You must replace <code>APIKEY</code> with your personal API key 
   and <code>PATH</code> with your image path</p>
 </aside>
 
@@ -270,7 +270,7 @@ include_cats | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include KoiReaders that have already been adopted.
 
 <aside class="success">
-Remember — to use an authenticated KoiReader API !
+<p class = 'success-para'>Remember — to use an authenticated KoiReader API !</p>
 </aside>
 
 <!-- ## Get a Specific KoiReader
