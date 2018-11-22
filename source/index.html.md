@@ -22,7 +22,7 @@ search: true
 
 KoiReader API is organized around REST. Our API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. We support cross-origin resource sharing, allowing you to interact securely with our API from a client-side web application (though you should never expose your API key in any public website's client-side code). JSON is returned by all API responses, including errors.
 
-We have currently enlisted language bindings for Shell, Node.js, Python. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+We have currently enlisted language bindings for Shell, Node.js, and Python. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
 <!-- This example API documentation page was created with [KoiReader](https://github.com/lord/KoiReader). Feel free to edit it and use it as a base for your own API's documentation. -->
 
@@ -58,7 +58,7 @@ api = Kittn::APIClient.authorize!('meowmeowmeow')
 
 > Make sure to replace <code>APIKEY</code> with your API key and <code>PATH</code> with your file path.
 
-Authenticate your account by including your API key in API requests. You can generate or change your API key using the [Dashboard](https://dev.koireader.com). Your API key carries many privileges, so be sure to keep them secure! Do not share your API key in publicly accessible areas such as GitHub, client-side code, and so forth.
+Authenticate your account by including your API key in API requests. You can generate or change your API key using the <a href='https://dev.koireader.com' target='_blank'>Dashboard</a>. Your API key carries many privileges, so be sure to keep them secure! Do not share your API key in publicly accessible areas such as GitHub, client-side code, and so forth.
 
 All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail. The end points expect for the API key to be included in all API requests to the server in a header that looks like the following:
 
