@@ -231,7 +231,7 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
-            <a href="#koireader" class="toc-h1 toc-link" data-title="KoiReader">KoiReader</a>
+            <a href="#api-reference" class="toc-h1 toc-link" data-title="API Reference">API Reference</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#get-context-from-documents" class="toc-h2 toc-link" data-title="Get Context From Documents">Get Context From Documents</a>
@@ -250,9 +250,9 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the KoiReader API! You can use our API to access KoiReader endpoints, which can get context from documents.</p>
+<p>KoiReader API is organized around REST. Our API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. We support cross-origin resource sharing, allowing you to interact securely with our API from a client-side web application (though you should never expose your API key in any public website&#39;s client-side code). JSON is returned by all API responses, including errors.</p>
 
-<p>We have language bindings in Shell, Node.js, Python. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>We have language bindings for Shell, Node.js, Python. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
 <!-- This example API documentation page was created with [KoiReader](https://github.com/lord/KoiReader). Feel free to edit it and use it as a base for your own API's documentation. -->
 <h1 id='authentication'>Authentication</h1>
@@ -261,7 +261,7 @@
 </blockquote>
 <pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 
-  curl -X POST   https://api.koireader.io/demo  
+  curl -X POST   https://api.koireader.com/v1/analyze  
     -H <span class="s1">'content-type: multipart/form-data'</span> 
     -H <span class="s1">'X-ApiKey: APIKEY'</span> -F <span class="s1">'file=@PATH'</span>
 </code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
@@ -281,9 +281,9 @@ api = Kittn::APIClient.authorize!('meowmeowmeow')
 <p>Make sure to replace <code>APIKEY</code> with your API key and <code>PATH</code> with your file path.</p>
 </blockquote>
 
-<p>KoiReader uses API keys to allow access to the API. You can register a new KoiReader API key at our <a href="https://dev.koireader.com">developer portal</a>.</p>
+<p>KoiReader uses API keys to allow access to the API. You can register for a new KoiReader API key at our <a href="https://dev.koireader.com">developer portal</a>.</p>
 
-<p>KoiReader expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>The end points expect for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
 <!-- `Authorization: meowmeowmeow` -->
 
@@ -293,7 +293,7 @@ api = Kittn::APIClient.authorize!('meowmeowmeow')
 <p class = 'notice-para'>You must replace <code>APIKEY</code> with your personal API key 
   and <code>PATH</code> with your image path</p>
 </aside>
-<h1 id='koireader'>KoiReader</h1><h2 id='get-context-from-documents'>Get Context From Documents</h2>
+<h1 id='api-reference'>API Reference</h1><h2 id='get-context-from-documents'>Get Context From Documents</h2>
 <!-- 
 ```ruby
 require 'kittn'
@@ -302,7 +302,7 @@ api = Kittn::APIClient.authorize!('meowmeowmeow')
 api.KoiReaders.get
 ```
 -->
-<pre class="highlight shell tab-shell"><code>curl -X POST   https://api.koireader.io/demo  
+<pre class="highlight shell tab-shell"><code>curl -X POST   https://api.koireader.com/v1/analyze  
   -H <span class="s1">'content-type: multipart/form-data'</span>  
   -H <span class="s1">'X-ApiKey: APIKEY'</span> -F <span class="s1">'file=@PATH'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
@@ -468,7 +468,7 @@ api.KoiReaders.get
 </span></code></pre>
 <p>This endpoint retrieves context and text from the documents .</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST   https://api.koireader.io/demo</code></p>
+<p><code>POST   https://api.koireader.com/v1/analyze</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -633,14 +633,6 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 <tr>
 <td>406</td>
 <td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The page requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
 </tr>
 <tr>
 <td>429</td>
