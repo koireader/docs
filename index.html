@@ -252,7 +252,7 @@
         <h1 id='introduction'>Introduction</h1>
 <p>KoiReader API is organized around REST. Our API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. We support cross-origin resource sharing, allowing you to interact securely with our API from a client-side web application (though you should never expose your API key in any public website&#39;s client-side code). JSON is returned by all API responses, including errors.</p>
 
-<p>We have language bindings for Shell, Node.js, Python. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>We have currently enlisted language bindings for Shell, Node.js, Python. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 
 <!-- This example API documentation page was created with [KoiReader](https://github.com/lord/KoiReader). Feel free to edit it and use it as a base for your own API's documentation. -->
 <h1 id='authentication'>Authentication</h1>
@@ -281,9 +281,9 @@ api = Kittn::APIClient.authorize!('meowmeowmeow')
 <p>Make sure to replace <code>APIKEY</code> with your API key and <code>PATH</code> with your file path.</p>
 </blockquote>
 
-<p>KoiReader uses API keys to allow access to the API. You can register for a new KoiReader API key at our <a href="https://dev.koireader.com">developer portal</a>.</p>
+<p>Authenticate your account by including your API key in API requests. You can generate or change your API key using the <a href="https://dev.koireader.com">Dashboard</a>. Your API key carries many privileges, so be sure to keep them secure! Do not share your API key in publicly accessible areas such as GitHub, client-side code, and so forth.</p>
 
-<p>The end points expect for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail. The end points expect for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
 <!-- `Authorization: meowmeowmeow` -->
 
@@ -602,7 +602,10 @@ ID | The ID of the KoiReader to delete
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside> -->
 
-<p>The KoiReader API uses the following error codes:</p>
+<p>KoiReader uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the 2xx range indicate success. Codes in the 4xx range indicate an error that failed given the information provided (e.g., a required parameter was omitted, a charge failed, etc.). Codes in the 5xx range indicate an error with KoiReader&#39;s servers.
+Some 4xx errors that could be handled programmatically (e.g., image resolution is too small) include an error code that briefly explains the error reported.</p>
+
+<p>Following error codes are being used:</p>
 
 <table><thead>
 <tr>
@@ -647,6 +650,8 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 <td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
 </tr>
 </tbody></table>
+
+<p>We recommend writing code that gracefully handles all possible API exceptions.</p>
 
       </div>
       <div class="dark-box">
