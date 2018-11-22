@@ -20,9 +20,9 @@ search: true
 
 # Introduction
 
-Welcome to the KoiReader API! You can use our API to access KoiReader endpoints, which can get context from documents.
+KoiReader API is organized around REST. Our API has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. We use built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. We support cross-origin resource sharing, allowing you to interact securely with our API from a client-side web application (though you should never expose your API key in any public website's client-side code). JSON is returned by all API responses, including errors.
 
-We have language bindings in Shell, Node.js, Python. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+We have language bindings for Shell, Node.js, Python. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
 <!-- This example API documentation page was created with [KoiReader](https://github.com/lord/KoiReader). Feel free to edit it and use it as a base for your own API's documentation. -->
 
@@ -33,7 +33,7 @@ We have language bindings in Shell, Node.js, Python. You can view code examples 
 ```shell
 # With shell, you can just pass the correct header with each request
 
-  curl -X POST   https://api.koireader.io/demo  
+  curl -X POST   https://api.koireader.com/v1/analyze  
     -H 'content-type: multipart/form-data' 
     -H 'X-ApiKey: APIKEY' -F 'file=@PATH'
 ```
@@ -58,9 +58,9 @@ api = Kittn::APIClient.authorize!('meowmeowmeow')
 
 > Make sure to replace <code>APIKEY</code> with your API key and <code>PATH</code> with your file path.
 
-KoiReader uses API keys to allow access to the API. You can register a new KoiReader API key at our [developer portal](https://dev.koireader.com).
+KoiReader uses API keys to allow access to the API. You can register for a new KoiReader API key at our [developer portal](https://dev.koireader.com).
 
-KoiReader expects for the API key to be included in all API requests to the server in a header that looks like the following:
+The end points expect for the API key to be included in all API requests to the server in a header that looks like the following:
 
 <!-- `Authorization: meowmeowmeow` -->
 `X-ApiKey: APIKEY`
@@ -70,7 +70,7 @@ KoiReader expects for the API key to be included in all API requests to the serv
   and <code>PATH</code> with your image path</p>
 </aside>
 
-# KoiReader
+# API Reference
 
 ## Get Context From Documents
 <!-- 
@@ -82,7 +82,7 @@ api.KoiReaders.get
 ```
 -->
 ```shell
-curl -X POST   https://api.koireader.io/demo  
+curl -X POST   https://api.koireader.com/v1/analyze  
   -H 'content-type: multipart/form-data'  
   -H 'X-ApiKey: APIKEY' -F 'file=@PATH'
 ```
@@ -260,7 +260,7 @@ This endpoint retrieves context and text from the documents .
 
 ### HTTPS Request
 
-`POST   https://api.koireader.io/demo`
+`POST   https://api.koireader.com/v1/analyze`
 
 ### Query Parameters
 

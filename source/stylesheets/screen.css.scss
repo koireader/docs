@@ -500,7 +500,8 @@ html, body {
   aside.success p {
     display:inline-block; 
     width: 94%; 
-    vertical-align:top;        
+    vertical-align:top;    
+    margin:0;    
   }
 
   aside.warning:before {
