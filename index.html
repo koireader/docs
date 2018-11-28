@@ -239,6 +239,9 @@
               </ul>
           </li>
           <li>
+            <a href="#supported-images" class="toc-h1 toc-link" data-title="Supported Images">Supported Images</a>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -597,6 +600,34 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the KoiReader to delete 
  -->
+<h1 id='supported-images'>Supported Images</h1>
+<p><b>File Formats</b></p>
+
+<p>KoiReader API supports the following file types:</p>
+
+<ul>
+<li>JPEG</li>
+<li>PNG8</li>
+<li>PNG24</li>
+<li>BMP</li>
+<li>WEBP</li>
+<li>PDF </li>
+<li>TIFF</li>
+</ul>
+
+<p>Note that some of these image formats are &quot;lossy&quot; (for example, JPEG). Reducing file sizes for such lossy formats may result in a degradation of image quality, and hence, KoiReader API accuracy.</p>
+
+<p><b>Image Sizing</b> </p>
+
+<p>To enable accurate image detection within the KoiReader API, images should generally be a minimum of 640 x 480 pixels (about 300k pixels).</p>
+
+<aside class="notice">
+<p class = 'notice-para'>Generally, KoiReader API requires images to be a sufficient size so that important features within the request can be easily distinguished. Sizes smaller or larger than these recommended sizes may work. However, smaller sizes may result in lower accuracy, while larger sizes may increase processing time and bandwidth usage.</p>
+</aside>
+
+<p><b>File Size</b> </p>
+
+<p>Image files sent to KoiReader API should not exceed 10MB. Reducing your file size can significantly improve throughput; however, be careful not to reduce image quality in the process. Note that the KoiReader API imposes a 10MB JSON request size limit.</p>
 <h1 id='errors'>Errors</h1>
 <!-- <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
