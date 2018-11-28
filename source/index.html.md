@@ -377,3 +377,31 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the KoiReader to delete 
  -->
+# Supported Images
+<b>File Formats</b>
+
+<p>KoiReader API supports the following file types:</p>
+
+  * JPEG
+  * PNG8
+  * PNG24
+  * BMP
+  * WEBP
+  * PDF 
+  * TIFF
+
+
+Note that some of these image formats are "lossy" (for example, JPEG). Reducing file sizes for such lossy formats may result in a degradation of image quality, and hence, KoiReader API accuracy.
+
+<b>Image Sizing</b> 
+
+<p>To enable accurate image detection within the KoiReader API, images should generally be a minimum of 640 x 480 pixels (about 300k pixels).</p>
+
+<aside class="notice">
+<p class = 'notice-para'>Generally, KoiReader API requires images to be a sufficient size so that important features within the request can be easily distinguished. Sizes smaller or larger than these recommended sizes may work. However, smaller sizes may result in lower accuracy, while larger sizes may increase processing time and bandwidth usage.</p>
+</aside>
+
+<b>File Size</b> 
+
+<p>Image files sent to KoiReader API should not exceed 10MB. Reducing your file size can significantly improve throughput; however, be careful not to reduce image quality in the process. Note that the KoiReader API imposes a 10MB JSON request size limit.</p>
+
