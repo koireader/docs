@@ -40,14 +40,31 @@ We have currently enlisted language bindings for Shell, Node.js, and Python. You
 
  
 ```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
+import requests
+headers = { 
+    "X-ApiKey": 'APIKEY'
+}
+response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('PATH', 'rb')}, headers=headers)
+print('RESPONSE: ',response.text)
 ```
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
+const fs = require('fs');
+const request = require('request');
+const options = {
+    method: "POST",
+    url: 'https://api.koireader.com/v1/analyze',
+    headers: {
+        "Content-Type": "multipart/form-data",
+        "X-ApiKey": 'APIKEY'
+    },
+    formData: {
+        "file": fs.createReadStream("PATH")
+    }
+};
+request(options, function(err, res, body) {
+    if (err) console.log(err);
+    console.log(body);
+});
 ``` 
 <!-- ```ruby
 require 'kittn'
@@ -87,22 +104,33 @@ curl -X POST   https://api.koireader.com/v1/analyze
   -H 'X-ApiKey: APIKEY' -F 'file=@PATH'
 ```
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let KoiReaders = api.KoiReaders.get();
+const fs = require('fs');
+const request = require('request');
+const options = {
+    method: "POST",
+    url: 'https://api.koireader.com/v1/analyze',
+    headers: {
+        "Content-Type": "multipart/form-data",
+        "X-ApiKey": 'APIKEY'
+    },
+    formData: {
+        "file": fs.createReadStream("PATH")
+    }
+};
+request(options, function(err, res, body) {
+    if (err) console.log(err);
+    console.log(body);
+});
 ```
 
 ```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.KoiReaders.get()
+import requests
+headers = { 
+    "X-ApiKey": 'APIKEY'
+}
+response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('PATH', 'rb')}, headers=headers)
+print('RESPONSE: ',response.text)
 ``` 
-
-
-
-
 > The above command returns JSON structured like this:
 
 ```json
