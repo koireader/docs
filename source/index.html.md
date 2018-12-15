@@ -290,12 +290,12 @@ This endpoint retrieves context and text from the documents .
 
 `POST   https://api.koireader.com/v1/analyze`
 
-### Query Parameters
+<!-- ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
 include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include KoiReaders that have already been adopted.
+available | true | If set to false, the result will include KoiReaders that have already been adopted. -->
 
 <aside class="success">
 <p class = 'success-para'>Remember — to use an authenticated KoiReader API !</p>
