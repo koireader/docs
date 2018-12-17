@@ -45,7 +45,7 @@ headers = {
     "X-ApiKey": 'APIKEY'
 }
 response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('PATH', 'rb')}, headers=headers)
-print('RESPONSE: ',response.text)
+print('RESPONSE: ',response.text['YOUR FILE NAME'])
 ```
 ```javascript
 const fs = require('fs');
@@ -63,7 +63,7 @@ const options = {
 };
 request(options, function(err, res, body) {
     if (err) console.log(err);
-    console.log(body);
+    console.log(body['YOUR FILE NAME']);
 });
 ``` 
 <!-- ```ruby
@@ -119,7 +119,7 @@ const options = {
 };
 request(options, function(err, res, body) {
     if (err) console.log(err);
-    console.log(body);
+    console.log(body['YOUR FILE NAME']);
 });
 ```
 
@@ -129,7 +129,7 @@ headers = {
     "X-ApiKey": 'APIKEY'
 }
 response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('PATH', 'rb')}, headers=headers)
-print('RESPONSE: ',response.text)
+print('RESPONSE: ',response.text['YOUR FILE NAME'])
 ``` 
 > The above command returns JSON structured like this:
 
