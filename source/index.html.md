@@ -35,7 +35,7 @@ We have currently enlisted language bindings for Shell, Node.js, and Python. You
 
   curl -X POST   https://api.koireader.com/v1/analyze  
     -H 'content-type: multipart/form-data' 
-    -H 'X-ApiKey: APIKEY' -F 'file=@PATH'
+    -H 'X-ApiKey: APIKEY' -F 'file=@/home/user/filename.png'
 ```
 
  
@@ -44,8 +44,8 @@ import requests
 headers = { 
     "X-ApiKey": 'APIKEY'
 }
-response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('PATH', 'rb')}, headers=headers)
-print('RESPONSE: ',response.text['YOUR FILE NAME'])
+response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('./filename.png', 'rb')}, headers=headers)
+print(response.text['filename.png'])
 ```
 ```javascript
 const fs = require('fs');
@@ -58,12 +58,12 @@ const options = {
         "X-ApiKey": 'APIKEY'
     },
     formData: {
-        "file": fs.createReadStream("PATH")
+        "file": fs.createReadStream("./filename.png")
     }
 };
 request(options, function(err, res, body) {
     if (err) console.log(err);
-    console.log(body['YOUR FILE NAME']);
+    console.log(body['filename.png']);
 });
 ``` 
 <!-- ```ruby
@@ -73,7 +73,7 @@ api = Kittn::APIClient.authorize!('meowmeowmeow')
 ``` -->
 
 
-> Make sure to replace <code>APIKEY</code> with your API key and <code>PATH</code> with your file path.
+> Make sure to enter a valid image path and replace <code>APIKEY</code> with your API key .
 
 Authenticate your account by including your API key in API requests. You can generate or change your API key using the <a href='https://dev.koireader.com' target='_blank'>Dashboard</a>. Your API key carries many privileges, so be sure to keep them secure! Do not share your API key in publicly accessible areas such as GitHub, client-side code, and so forth.
 
@@ -83,8 +83,7 @@ All API requests must be made over HTTPS. Calls made over plain HTTP will fail. 
 `X-ApiKey: APIKEY`
 
 <aside class="notice">
-<p class = 'notice-para'>You must replace <code>APIKEY</code> with your personal API key 
-  and <code>PATH</code> with your image path</p>
+<p class = 'notice-para'>You must enter a valid image path and replace <code>APIKEY</code> with your personal API key.
 </aside>
 
 # API Reference
@@ -101,7 +100,7 @@ api.KoiReaders.get
 ```shell
 curl -X POST   https://api.koireader.com/v1/analyze  
   -H 'content-type: multipart/form-data'  
-  -H 'X-ApiKey: APIKEY' -F 'file=@PATH'
+  -H 'X-ApiKey: APIKEY' -F 'file=@/home/user/filename.png'
 ```
 ```javascript
 const fs = require('fs');
@@ -114,12 +113,12 @@ const options = {
         "X-ApiKey": 'APIKEY'
     },
     formData: {
-        "file": fs.createReadStream("PATH")
+        "file": fs.createReadStream("./filename.png")
     }
 };
 request(options, function(err, res, body) {
     if (err) console.log(err);
-    console.log(body['YOUR FILE NAME']);
+    console.log(body['filename.png']);
 });
 ```
 
@@ -128,8 +127,8 @@ import requests
 headers = { 
     "X-ApiKey": 'APIKEY'
 }
-response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('PATH', 'rb')}, headers=headers)
-print('RESPONSE: ',response.text['YOUR FILE NAME'])
+response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('./filename.png', 'rb')}, headers=headers)
+print(response.text['filename.png'])
 ``` 
 > The above command returns JSON structured like this:
 
