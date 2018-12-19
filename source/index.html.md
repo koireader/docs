@@ -35,7 +35,7 @@ We have currently enlisted language bindings for Shell, Node.js, and Python. You
 
   curl -X POST   https://api.koireader.com/v1/analyze  
     -H 'content-type: multipart/form-data' 
-    -H 'X-ApiKey: APIKEY' -F 'file=@/home/user/filename.png'
+    -H 'X-ApiKey: APIKEY' -F 'file=@/home/user/invoice.png'
 ```
 
  
@@ -44,8 +44,8 @@ import requests
 headers = { 
     "X-ApiKey": 'APIKEY'
 }
-response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('./filename.png', 'rb')}, headers=headers)
-print(response.text['filename.png'])
+response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('./invoice.png', 'rb')}, headers=headers)
+print(response.text['invoice.png'])
 ```
 ```javascript
 const fs = require('fs');
@@ -58,12 +58,12 @@ const options = {
         "X-ApiKey": 'APIKEY'
     },
     formData: {
-        "file": fs.createReadStream("./filename.png")
+        "file": fs.createReadStream("./invoice.png")
     }
 };
 request(options, function(err, res, body) {
     if (err) console.log(err);
-    console.log(body['filename.png']);
+    console.log(body['invoice.png']);
 });
 ``` 
 <!-- ```ruby
@@ -100,7 +100,7 @@ api.KoiReaders.get
 ```shell
 curl -X POST   https://api.koireader.com/v1/analyze  
   -H 'content-type: multipart/form-data'  
-  -H 'X-ApiKey: APIKEY' -F 'file=@/home/user/filename.png'
+  -H 'X-ApiKey: APIKEY' -F 'file=@/home/user/invoice.png'
 ```
 ```javascript
 const fs = require('fs');
@@ -113,12 +113,12 @@ const options = {
         "X-ApiKey": 'APIKEY'
     },
     formData: {
-        "file": fs.createReadStream("./filename.png")
+        "file": fs.createReadStream("./invoice.png")
     }
 };
 request(options, function(err, res, body) {
     if (err) console.log(err);
-    console.log(body['filename.png']);
+    console.log(body['invoice.png']);
 });
 ```
 
@@ -127,8 +127,8 @@ import requests
 headers = { 
     "X-ApiKey": 'APIKEY'
 }
-response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('./filename.png', 'rb')}, headers=headers)
-print(response.text['filename.png'])
+response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('./invoice.png', 'rb')}, headers=headers)
+print(response.text['invoice.png'])
 ``` 
 > The above command returns JSON structured like this:
 
