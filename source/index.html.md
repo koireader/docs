@@ -45,7 +45,7 @@ headers = {
     "X-ApiKey": 'APIKEY'
 }
 response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('./invoice.png', 'rb')}, headers=headers)
-print(response.text['invoice.png'])
+print(response.json()['invoice.png'])
 ```
 ```javascript
 const fs = require('fs');
@@ -128,7 +128,7 @@ headers = {
     "X-ApiKey": 'APIKEY'
 }
 response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('./invoice.png', 'rb')}, headers=headers)
-print(response.text['invoice.png'])
+print(response.json()['invoice.png'])
 ``` 
 > The above command returns JSON structured like this:
 
