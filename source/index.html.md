@@ -134,7 +134,7 @@ print(response.json()['invoice.png'])
 
 ```json
 {
-	'billing_address': 'Bill to A oss\nMathis\nAddress : 241 Zekim\nPi-ore',
+	'billing_address': 'Bill to A"oss\nMathis\nAddress : 241 Zekim\nPi-ore',
 	'delivery_address': None,
 	'detected_total': '',
 	'discount': '',
