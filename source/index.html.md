@@ -522,7 +522,7 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the KoiReader to delete 
  -->
-# Supported Images
+# Supported Documents
 <b>File Formats</b>
 
 <p>KoiReader API supports the following file types:</p>
@@ -549,4 +549,11 @@ Note that some of these image formats are "lossy" (for example, JPEG). Reducing 
 <b>File Size</b> 
 
 <p>Image files sent to KoiReader API should not exceed 10MB. Reducing your file size can significantly improve throughput; however, be careful not to reduce image quality in the process. Note that the KoiReader API imposes a 10MB JSON request size limit.</p>
+
+<b>Number of Pages</b>
+
+<p>Maximum number of supported pages per invoice is 20. Any document with more pages than this will not be processed. You will receive error code <i>413</i> if this happens.</p>
+
+
+
 
