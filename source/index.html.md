@@ -134,294 +134,487 @@ print(response.json()['invoice.png'])
 
 ```json
 {
-	"delivery_address": [{"text": None,"page": "0"}, {"text": "Delivery","page": "1"}],
-	"tax": [{"text": None,"page": "0"}, {"text": "1223","page": "1"}],
-	"detected_total": [{"text": "$ 123987","page": "0"},{"text": "$ 56785","page": "1"}],
-	"origin_address": [{"text": "Delhi","page": "0"},{"text": None,"page": "1"}],
-	"processed_image_dims": None,
-	"status": "true",
-	"num_of_pages": "2",
-	"billing_address": [{"text": "ABC","page": "0"},{"text": "Hello","page": "1"}],
-	"discount": [{"text": "$109667","page": "0"},{"text": None,"page": "1"}],
-	"tables": [{
+	"origin_address": [
+		{
+		"page": 0,
+		"text": null
+		}
+	],
+	"tax": [
+		{
+		"page": 1,
+		"text": null
+		}
+	],
+	"discount": [
+		{
+		"page": 0,
+		"text": null
+		}
+	],
+	"tables": [
+		{
 		"metadata": {
-			"page": 2,
-			"bbox": [64, 146, 509, 383],
-			"score": 0.9
+			"score": 0.98,
+			"bbox": [
+				134,
+				711,
+				384,
+				928
+			],
+			"page": 0
 		},
-		"summary": [
-			["", "Participation", "Attainment", "EEI", "GPI", "Overall rank"],
-			["Netherlands", "3", "3=", "1", "1=", "1"],
-			["Finland", "1", "8", "5", "5=", "2"],
-			["UK", "5", "5=", "2", "5=", "3"],
-			["US", "7=", "1", "7", "12", "4"],
-			["Canada", "7=", "2", "3=", "10=", "5"],
-			["Australia", "6", "3=", "6", "7", "6"],
-			["Ireland", "12", "5=", "3=", "9", "7"],
-			["France", "4", "9", "8=", "8", "8"],
-			["Sweden", "9=", "7", "8=", "13", "9"],
-			["Italy", "2", "12", "10", "10=", "10"],
-			["Germany", "13", "11", "11", "1=", "11"],
-			["Belgium", "9=", "10", "13", "3", "12"],
-			["Austria", "9=", "13", "12", "4", "13"]
+		"cells": [
+			{
+				"score": 0.98,
+				"text": " Item #",
+				"cell_position": [
+					0,
+					0
+				],
+				"bbox": [
+					134,
+					711,
+					186,
+					740
+				]
+			},
+			{
+				"score": 0.98,
+				"text": " Charges",
+				"cell_position": [
+					0,
+					1
+				],
+				"bbox": [
+					186,
+					711,
+					249,
+					740
+				]
+			},
+			{
+				"score": 0.98,
+				"text": " Quantity",
+				"cell_position": [
+					0,
+					2
+				],
+				"bbox": [
+					249,
+					711,
+					314,
+					740
+				]
+			},
+			{
+				"score": 0.98,
+				"text": " Pay Total",
+				"cell_position": [
+					0,
+					3
+				],
+				"bbox": [
+					314,
+					711,
+					384,
+					740
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "512",
+				"cell_position": [
+					1,
+					0
+				],
+				"bbox": [
+					134,
+					740,
+					186,
+					773
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "215.58",
+				"cell_position": [
+					1,
+					1
+				],
+				"bbox": [
+					186,
+					740,
+					249,
+					773
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "10",
+				"cell_position": [
+					1,
+					2
+				],
+				"bbox": [
+					249,
+					740,
+					314,
+					773
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "726.02",
+				"cell_position": [
+					1,
+					3
+				],
+				"bbox": [
+					314,
+					740,
+					384,
+					773
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "150",
+				"cell_position": [
+					2,
+					0
+				],
+				"bbox": [
+					134,
+					773,
+					186,
+					804
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "108.76",
+				"cell_position": [
+					2,
+					1
+				],
+				"bbox": [
+					186,
+					773,
+					249,
+					804
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "3",
+				"cell_position": [
+					2,
+					2
+				],
+				"bbox": [
+					249,
+					773,
+					314,
+					804
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "48.62",
+				"cell_position": [
+					2,
+					3
+				],
+				"bbox": [
+					314,
+					773,
+					384,
+					804
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "590",
+				"cell_position": [
+					3,
+					0
+				],
+				"bbox": [
+					134,
+					804,
+					186,
+					834
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "335.52",
+				"cell_position": [
+					3,
+					1
+				],
+				"bbox": [
+					186,
+					804,
+					249,
+					834
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "19",
+				"cell_position": [
+					3,
+					2
+				],
+				"bbox": [
+					249,
+					804,
+					314,
+					834
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "908.4",
+				"cell_position": [
+					3,
+					3
+				],
+				"bbox": [
+					314,
+					804,
+					384,
+					834
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "300",
+				"cell_position": [
+					4,
+					0
+				],
+				"bbox": [
+					134,
+					834,
+					186,
+					864
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "667.53",
+				"cell_position": [
+					4,
+					1
+				],
+				"bbox": [
+					186,
+					834,
+					249,
+					864
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "9",
+				"cell_position": [
+					4,
+					2
+				],
+				"bbox": [
+					249,
+					834,
+					314,
+					864
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "555,.14",
+				"cell_position": [
+					4,
+					3
+				],
+				"bbox": [
+					314,
+					834,
+					384,
+					864
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "849",
+				"cell_position": [
+					5,
+					0
+				],
+				"bbox": [
+					134,
+					864,
+					186,
+					896
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "507.47",
+				"cell_position": [
+					5,
+					1
+				],
+				"bbox": [
+					186,
+					864,
+					249,
+					896
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "",
+				"cell_position": [
+					5,
+					2
+				],
+				"bbox": [
+					249,
+					864,
+					314,
+					896
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "468.66",
+				"cell_position": [
+					5,
+					3
+				],
+				"bbox": [
+					314,
+					864,
+					384,
+					896
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "126",
+				"cell_position": [
+					6,
+					0
+				],
+				"bbox": [
+					134,
+					896,
+					186,
+					928
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "397.01",
+				"cell_position": [
+					6,
+					1
+				],
+				"bbox": [
+					186,
+					896,
+					249,
+					928
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "8",
+				"cell_position": [
+					6,
+					2
+				],
+				"bbox": [
+					249,
+					896,
+					314,
+					928
+				]
+			},
+			{
+				"score": 0.98,
+				"text": "468.21",
+				"cell_position": [
+					6,
+					3
+				],
+				"bbox": [
+					314,
+					896,
+					384,
+					928
+				]
+			}
 		],
-		"cells": [{
-			"text": "",
-			"cell_position": [0, 0]
-		}, {
-			"text": "Participation",
-			"cell_position": [0, 1]
-		}, {
-			"text": "Attainment",
-			"cell_position": [0, 2]
-		}, {
-			"text": "EEI",
-			"cell_position": [0, 3]
-		}, {
-			"text": "GPI",
-			"cell_position": [0, 4]
-		}, {
-			"text": "Overall rank",
-			"cell_position": [0, 5]
-		}, {
-			"text": "Netherlands",
-			"cell_position": [1, 0]
-		}, {
-			"text": "3",
-			"cell_position": [1, 1]
-		}, {
-			"text": "3=",
-			"cell_position": [1, 2]
-		}, {
-			"text": "1",
-			"cell_position": [1, 3]
-		}, {
-			"text": "1=",
-			"cell_position": [1, 4]
-		}, {
-			"text": "1",
-			"cell_position": [1, 5]
-		}, {
-			"text": "Finland",
-			"cell_position": [2, 0]
-		}, {
-			"text": "1",
-			"cell_position": [2, 1]
-		}, {
-			"text": "8",
-			"cell_position": [2, 2]
-		}, {
-			"text": "5",
-			"cell_position": [2, 3]
-		}, {
-			"text": "5=",
-			"cell_position": [2, 4]
-		}, {
-			"text": "2",
-			"cell_position": [2, 5]
-		}, {
-			"text": "UK",
-			"cell_position": [3, 0]
-		}, {
-			"text": "5",
-			"cell_position": [3, 1]
-		}, {
-			"text": "5=",
-			"cell_position": [3, 2]
-		}, {
-			"text": "2",
-			"cell_position": [3, 3]
-		}, {
-			"text": "5=",
-			"cell_position": [3, 4]
-		}, {
-			"text": "3",
-			"cell_position": [3, 5]
-		}, {
-			"text": "US",
-			"cell_position": [4, 0]
-		}, {
-			"text": "7=",
-			"cell_position": [4, 1]
-		}, {
-			"text": "1",
-			"cell_position": [4, 2]
-		}, {
-			"text": "7",
-			"cell_position": [4, 3]
-		}, {
-			"text": "12",
-			"cell_position": [4, 4]
-		}, {
-			"text": "4",
-			"cell_position": [4, 5]
-		}, {
-			"text": "Canada",
-			"cell_position": [5, 0]
-		}, {
-			"text": "7=",
-			"cell_position": [5, 1]
-		}, {
-			"text": "2",
-			"cell_position": [5, 2]
-		}, {
-			"text": "3=",
-			"cell_position": [5, 3]
-		}, {
-			"text": "10=",
-			"cell_position": [5, 4]
-		}, {
-			"text": "5",
-			"cell_position": [5, 5]
-		}, {
-			"text": "Australia",
-			"cell_position": [6, 0]
-		}, {
-			"text": "6",
-			"cell_position": [6, 1]
-		}, {
-			"text": "3=",
-			"cell_position": [6, 2]
-		}, {
-			"text": "6",
-			"cell_position": [6, 3]
-		}, {
-			"text": "7",
-			"cell_position": [6, 4]
-		}, {
-			"text": "6",
-			"cell_position": [6, 5]
-		}, {
-			"text": "Ireland",
-			"cell_position": [7, 0]
-		}, {
-			"text": "12",
-			"cell_position": [7, 1]
-		}, {
-			"text": "5=",
-			"cell_position": [7, 2]
-		}, {
-			"text": "3=",
-			"cell_position": [7, 3]
-		}, {
-			"text": "9",
-			"cell_position": [7, 4]
-		}, {
-			"text": "7",
-			"cell_position": [7, 5]
-		}, {
-			"text": "France",
-			"cell_position": [8, 0]
-		}, {
-			"text": "4",
-			"cell_position": [8, 1]
-		}, {
-			"text": "9",
-			"cell_position": [8, 2]
-		}, {
-			"text": "8=",
-			"cell_position": [8, 3]
-		}, {
-			"text": "8",
-			"cell_position": [8, 4]
-		}, {
-			"text": "8",
-			"cell_position": [8, 5]
-		}, {
-			"text": "Sweden",
-			"cell_position": [9, 0]
-		}, {
-			"text": "9=",
-			"cell_position": [9, 1]
-		}, {
-			"text": "7",
-			"cell_position": [9, 2]
-		}, {
-			"text": "8=",
-			"cell_position": [9, 3]
-		}, {
-			"text": "13",
-			"cell_position": [9, 4]
-		}, {
-			"text": "9",
-			"cell_position": [9, 5]
-		}, {
-			"text": "Italy",
-			"cell_position": [10, 0]
-		}, {
-			"text": "2",
-			"cell_position": [10, 1]
-		}, {
-			"text": "12",
-			"cell_position": [10, 2]
-		}, {
-			"text": "10",
-			"cell_position": [10, 3]
-		}, {
-			"text": "10=",
-			"cell_position": [10, 4]
-		}, {
-			"text": "10",
-			"cell_position": [10, 5]
-		}, {
-			"text": "Germany",
-			"cell_position": [11, 0]
-		}, {
-			"text": "13",
-			"cell_position": [11, 1]
-		}, {
-			"text": "11",
-			"cell_position": [11, 2]
-		}, {
-			"text": "11",
-			"cell_position": [11, 3]
-		}, {
-			"text": "1=",
-			"cell_position": [11, 4]
-		}, {
-			"text": "11",
-			"cell_position": [11, 5]
-		}, {
-			"text": "Belgium",
-			"cell_position": [12, 0]
-		}, {
-			"text": "9=",
-			"cell_position": [12, 1]
-		}, {
-			"text": "10",
-			"cell_position": [12, 2]
-		}, {
-			"text": "13",
-			"cell_position": [12, 3]
-		}, {
-			"text": "3",
-			"cell_position": [12, 4]
-		}, {
-			"text": "12",
-			"cell_position": [12, 5]
-		}, {
-			"text": "Austria",
-			"cell_position": [13, 0]
-		}, {
-			"text": "9=",
-			"cell_position": [13, 1]
-		}, {
-			"text": "13",
-			"cell_position": [13, 2]
-		}, {
-			"text": "12",
-			"cell_position": [13, 3]
-		}, {
-			"text": "4",
-			"cell_position": [13, 4]
-		}, {
-			"text": "13",
-			"cell_position": [13, 5]
-		}]
-	}],
-	"due_date": [{"text": None,"page": "0"},{"text": "2019-10-13","page": "1"}],
-	
-	"invoice_id": [{"text": "#12356","page": "0"},{"text": None,"page": "1"}]
+		"summary": [
+				[" Item #"," Charges"," Quantity"," Pay Total"],
+				["512","215.58","10","726.02"],
+				["150","108.76","3","48.62"],
+				["590","335.52","19","908.4"],
+				["300","667.53","9","555,.14"],
+				["849","507.47","","468.66"],
+				["126","397.01","8","468.21"]
+			]
+		}
+	],
+	"metadata": {
+		"num_of_pages": 1,
+		"dimensions": [
+		1209,
+		1059,
+		3
+		],
+		"info": "Detected Table"
+	},
+	"billing_address": [
+		{
+		"page": 0,
+		"text": "Bill to\n199 Nukle Key, Darof Glen\nOgefuve, NV, BY\nhovfop.im\nPhone: 716.222.5777, E-mail: Herminio_Reynolds44@hotmail.com"
+		}
+	],
+	"detected_total": [
+		{
+		"page": 0,
+		"text": "$ 751.82"
+		}
+	],
+	"invoice_id": [
+		{
+		"page": 0,
+		"text": "#7ece1e20"
+		}
+	],
+	"delivery_address": [
+		{
+		"page": 0,
+		"text": "o Ship:\n998 Fojgi Manor, Botpu Square\nLesabem, FL, JP\nri.mn\nE-mail: Barbara_Becker78@gmail.com, Phone:\n(012) 653-3315 x4427"
+		}
+	],
+	"due_date": [
+		{
+		"page": 0,
+		"text": null
+		}
+	],
+	"detected_subtotal": [
+		{
+		"page": 0,
+		"text": null
+		}
+	],
+	"status": true
 }
 ```
 
