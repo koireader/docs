@@ -134,270 +134,294 @@ print(response.json()['invoice.png'])
 
 ```json
 {
-	'billing_address': 'Alling Mdreeg\n399 Ikeroc Park, Piszo Park\nKaunicef, WA, PT\nmac.wc\nPhone: (539) 203-2291, E-mail:\nMelyna Bogicich6$@yahoo.com',
-	'delivery_address': 'Ship to\n1902 Owedov Road, Kecbe Mill\nEfujeneb, DE, Cl\nelofo.om\nPhone: 213-569-7939, E-mail:\nSophia Herman@hotmail.com',
-	'detected_total': ' $ 19467',
-	'discount': ' 919.6',
-	'due_date': None,
-	'invoice_id': '#2100a359',
-	'origin_address': 'Smitham - Raynor\nSund-alone acudng méeite\n214 Dipo Glen, Dohin Boulevard\nKocizni, 0K, SR\nPhone: 1-735-920961 x51054, E-mail:\nCarlos Hintz@gmail.com',
-	'tables': [{
-		'cells': [{
-			'bbox': [86, 495, 119, 564],
-			'cell_position': [0, 0],
-			'score': 0.92,
-			'text': ' Item'
-		}, {
-			'bbox': [86, 564, 119, 593],
-			'cell_position': [0, 1],
-			'score': 0.91,
-			'text': ' Info'
-		}, {
-			'bbox': [86, 593, 119, 659],
-			'cell_position': [0, 2],
-			'score': 0.92,
-			'text': ' From'
-		}, {
-			'bbox': [86, 659, 119, 707],
-			'cell_position': [0, 3],
-			'score': 0.91,
-			'text': ' For'
-		}, {
-			'bbox': [86, 707, 119, 755],
-			'cell_position': [0, 4],
-			'score': 0.91,
-			'text': ' Money'
-		}, {
-			'bbox': [86, 755, 119, 785],
-			'cell_position': [0, 5],
-			'score': 0.92,
-			'text': ' No . of items'
-		}, {
-			'bbox': [119, 495, 439, 564],
-			'cell_position': [0, 6],
-			'score': 0.92,
-			'text': ' Unit price'
-		}, {
-			'bbox': [119, 564, 439, 593],
-			'cell_position': [0, 7],
-			'score': 0.91,
-			'text': ' Total cost'
-		}, {
-			'bbox': [119, 593, 439, 659],
-			'cell_position': [1, 0],
-			'score': 0.92,
-			'text': '201'
-		}, {
-			'bbox': [119, 659, 439, 707],
-			'cell_position': [1, 1],
-			'score': 0.92,
-			'text': 'Shoes '
-		}, {
-			'bbox': [119, 707, 439, 755],
-			'cell_position': [1, 2],
-			'score': 0.91,
-			'text': 'Shoes '
-		}, {
-			'bbox': [119, 755, 439, 785],
-			'cell_position': [1, 3],
-			'score': 0.92,
-			'text': 'Bike'
-		}, {
-			'bbox': [439, 495, 520, 564],
-			'cell_position': [1, 4],
-			'score': 0.92,
-			'text': '576.41'
-		}, {
-			'bbox': [439, 564, 520, 593],
-			'cell_position': [1, 5],
-			'score': 0.91,
-			'text': '1'
-		}, {
-			'bbox': [439, 593, 520, 659],
-			'cell_position': [1, 6],
-			'score': 0.91,
-			'text': '23.29'
-		}, {
-			'bbox': [439, 659, 520, 707],
-			'cell_position': [1, 7],
-			'score': 0.92,
-			'text': '169.11'
-		}, {
-			'bbox': [439, 707, 520, 755],
-			'cell_position': [2, 0],
-			'score': 0.91,
-			'text': '293'
-		}, {
-			'bbox': [439, 755, 520, 785],
-			'cell_position': [2, 1],
-			'score': 0.92,
-			'text': 'Car '
-		}, {
-			'bbox': [520, 495, 559, 564],
-			'cell_position': [2, 2],
-			'score': 0.91,
-			'text': 'Small  Concrete  Gloves '
-		}, {
-			'bbox': [520, 564, 559, 593],
-			'cell_position': [2, 3],
-			'score': 0.91,
-			'text': 'Bike'
-		}, {
-			'bbox': [520, 593, 559, 659],
-			'cell_position': [2, 4],
-			'score': 0.92,
-			'text': '57.23'
-		}, {
-			'bbox': [520, 659, 559, 707],
-			'cell_position': [2, 5],
-			'score': 0.92,
-			'text': '13'
-		}, {
-			'bbox': [520, 707, 559, 755],
-			'cell_position': [2, 6],
-			'score': 0.91,
-			'text': '410.31'
-		}, {
-			'bbox': [520, 755, 559, 785],
-			'cell_position': [2, 7],
-			'score': 0.91,
-			'text': '439.19'
-		}, {
-			'bbox': [559, 495, 605, 564],
-			'cell_position': [3, 0],
-			'score': 0.91,
-			'text': '853'
-		}, {
-			'bbox': [559, 564, 605, 593],
-			'cell_position': [3, 1],
-			'score': 0.92,
-			'text': 'Ruafi moabo ufufikoh kowcugih orrohar lew mohoklo  cedlehpu 10 nefvaf ve zozaal. '
-		}, {
-			'bbox': [559, 593, 605, 659],
-			'cell_position': [3, 2],
-			'score': 0.92,
-			'text': 'Bike '
-		}, {
-			'bbox': [559, 659, 605, 707],
-			'cell_position': [3, 3],
-			'score': 0.92,
-			'text': 'Car '
-		}, {
-			'bbox': [559, 707, 605, 755],
-			'cell_position': [3, 4],
-			'score': 0.91,
-			'text': '516.37'
-		}, {
-			'bbox': [559, 755, 605, 785],
-			'cell_position': [3, 5],
-			'score': 0.92,
-			'text': '13'
-		}, {
-			'bbox': [605, 495, 649, 564],
-			'cell_position': [3, 6],
-			'score': 0.91,
-			'text': '550.62'
-		}, {
-			'bbox': [605, 564, 649, 593],
-			'cell_position': [3, 7],
-			'score': 0.92,
-			'text': '465.35'
-		}, {
-			'bbox': [605, 593, 649, 659],
-			'cell_position': [4, 0],
-			'score': 0.91,
-			'text': '223'
-		}, {
-			'bbox': [605, 659, 649, 707],
-			'cell_position': [4, 1],
-			'score': 0.92,
-			'text': 'Gag,velvi hobfu haw let cahzid co wopew tafupwur pooj  edavpi gi girjottug dija nitfano numvavuha. '
-		}, {
-			'bbox': [605, 707, 649, 755],
-			'cell_position': [4, 2],
-			'score': 0.92,
-			'text': 'Small Cotton Fish '
-		}, {
-			'bbox': [605, 755, 649, 785],
-			'cell_position': [4, 3],
-			'score': 0.92,
-			'text': 'Chair'
-		}, {
-			'bbox': [649, 495, 691, 564],
-			'cell_position': [4, 4],
-			'score': 0.92,
-			'text': '860.04'
-		}, {
-			'bbox': [649, 564, 691, 593],
-			'cell_position': [4, 5],
-			'score': 0.91,
-			'text': '11'
-		}, {
-			'bbox': [649, 593, 691, 659],
-			'cell_position': [4, 6],
-			'score': 0.92,
-			'text': '249.93'
-		}, {
-			'bbox': [649, 659, 691, 707],
-			'cell_position': [4, 7],
-			'score': 0.92,
-			'text': '299.03'
-		}, {
-			'bbox': [649, 707, 691, 755],
-			'cell_position': [5, 0],
-			'score': 0.91,
-			'text': '125'
-		}, {
-			'bbox': [649, 755, 691, 785],
-			'cell_position': [5, 1],
-			'score': 0.92,
-			'text': 'Gloves '
-		}, {
-			'bbox': [691, 495, 733, 564],
-			'cell_position': [5, 2],
-			'score': 0.91,
-			'text': 'Garden '
-		}, {
-			'bbox': [691, 564, 733, 593],
-			'cell_position': [5, 3],
-			'score': 0.92,
-			'text': 'Fish'
-		}, {
-			'bbox': [691, 593, 733, 659],
-			'cell_position': [5, 4],
-			'score': 0.92,
-			'text': ''
-		}, {
-			'bbox': [691, 659, 733, 707],
-			'cell_position': [5, 5],
-			'score': 0.91,
-			'text': '17'
-		}, {
-			'bbox': [691, 707, 733, 755],
-			'cell_position': [5, 6],
-			'score': 0.92,
-			'text': '676.33'
-		}, {
-			'bbox': [691, 755, 733, 785],
-			'cell_position': [5, 7],
-			'score': 0.91,
-			'text': '836.77'
-		}],
-		'metadata': {
-			'bbox': [86, 493, 733, 785],
-			'page': 0,
-			'score': 0.98
+	"delivery_address": [{"text": None,"page": "0"}, {"text": "Delivery","page": "1"}],
+	"tax": [{"text": None,"page": "0"}, {"text": "1223","page": "1"}],
+	"detected_total": [{"text": "$ 123987","page": "0"},{"text": "$ 56785","page": "1"}],
+	"origin_address": [{"text": "Delhi","page": "0"},{"text": None,"page": "1"}],
+	"processed_image_dims": None,
+	"status": "true",
+	"num_of_pages": "2",
+	"billing_address": [{"text": "ABC","page": "0"},{"text": "Hello","page": "1"}],
+	"discount": [{"text": "$109667","page": "0"},{"text": None,"page": "1"}],
+	"tables": [{
+		"metadata": {
+			"page": 2,
+			"bbox": [64, 146, 509, 383],
+			"score": 0.9
 		},
-		'summary': [
-			[' Item', ' Info', ' From', ' For', ' Money', ' No . of items', ' Unit price', ' Total cost'],
-			['201', 'Shoes ', 'Shoes ', 'Bike', '576.41', '1', '23.29', '169.11'],
-			['293', 'Car ', 'Small  Concrete  Gloves ', 'Bike', '57.23', '13', '410.31', '439.19'],
-			['853', 'Ruafi moabo ufufikoh kowcugih orrohar lew mohoklo  cedlehpu 10 nefvaf ve zozaal. ', 'Bike ', 'Car ', '516.37', '13', '550.62', '465.35'],
-			['223', 'Gag,velvi hobfu haw let cahzid co wopew tafupwur pooj  edavpi gi girjottug dija nitfano numvavuha. ', 'Small Cotton Fish ', 'Chair', '860.04', '11', '249.93', '299.03'],
-			['125', 'Gloves ', 'Garden ', 'Fish', '', '17', '676.33', '836.77']
-		]
+		"summary": [
+			["", "Participation", "Attainment", "EEI", "GPI", "Overall rank"],
+			["Netherlands", "3", "3=", "1", "1=", "1"],
+			["Finland", "1", "8", "5", "5=", "2"],
+			["UK", "5", "5=", "2", "5=", "3"],
+			["US", "7=", "1", "7", "12", "4"],
+			["Canada", "7=", "2", "3=", "10=", "5"],
+			["Australia", "6", "3=", "6", "7", "6"],
+			["Ireland", "12", "5=", "3=", "9", "7"],
+			["France", "4", "9", "8=", "8", "8"],
+			["Sweden", "9=", "7", "8=", "13", "9"],
+			["Italy", "2", "12", "10", "10=", "10"],
+			["Germany", "13", "11", "11", "1=", "11"],
+			["Belgium", "9=", "10", "13", "3", "12"],
+			["Austria", "9=", "13", "12", "4", "13"]
+		],
+		"cells": [{
+			"text": "",
+			"cell_position": [0, 0]
+		}, {
+			"text": "Participation",
+			"cell_position": [0, 1]
+		}, {
+			"text": "Attainment",
+			"cell_position": [0, 2]
+		}, {
+			"text": "EEI",
+			"cell_position": [0, 3]
+		}, {
+			"text": "GPI",
+			"cell_position": [0, 4]
+		}, {
+			"text": "Overall rank",
+			"cell_position": [0, 5]
+		}, {
+			"text": "Netherlands",
+			"cell_position": [1, 0]
+		}, {
+			"text": "3",
+			"cell_position": [1, 1]
+		}, {
+			"text": "3=",
+			"cell_position": [1, 2]
+		}, {
+			"text": "1",
+			"cell_position": [1, 3]
+		}, {
+			"text": "1=",
+			"cell_position": [1, 4]
+		}, {
+			"text": "1",
+			"cell_position": [1, 5]
+		}, {
+			"text": "Finland",
+			"cell_position": [2, 0]
+		}, {
+			"text": "1",
+			"cell_position": [2, 1]
+		}, {
+			"text": "8",
+			"cell_position": [2, 2]
+		}, {
+			"text": "5",
+			"cell_position": [2, 3]
+		}, {
+			"text": "5=",
+			"cell_position": [2, 4]
+		}, {
+			"text": "2",
+			"cell_position": [2, 5]
+		}, {
+			"text": "UK",
+			"cell_position": [3, 0]
+		}, {
+			"text": "5",
+			"cell_position": [3, 1]
+		}, {
+			"text": "5=",
+			"cell_position": [3, 2]
+		}, {
+			"text": "2",
+			"cell_position": [3, 3]
+		}, {
+			"text": "5=",
+			"cell_position": [3, 4]
+		}, {
+			"text": "3",
+			"cell_position": [3, 5]
+		}, {
+			"text": "US",
+			"cell_position": [4, 0]
+		}, {
+			"text": "7=",
+			"cell_position": [4, 1]
+		}, {
+			"text": "1",
+			"cell_position": [4, 2]
+		}, {
+			"text": "7",
+			"cell_position": [4, 3]
+		}, {
+			"text": "12",
+			"cell_position": [4, 4]
+		}, {
+			"text": "4",
+			"cell_position": [4, 5]
+		}, {
+			"text": "Canada",
+			"cell_position": [5, 0]
+		}, {
+			"text": "7=",
+			"cell_position": [5, 1]
+		}, {
+			"text": "2",
+			"cell_position": [5, 2]
+		}, {
+			"text": "3=",
+			"cell_position": [5, 3]
+		}, {
+			"text": "10=",
+			"cell_position": [5, 4]
+		}, {
+			"text": "5",
+			"cell_position": [5, 5]
+		}, {
+			"text": "Australia",
+			"cell_position": [6, 0]
+		}, {
+			"text": "6",
+			"cell_position": [6, 1]
+		}, {
+			"text": "3=",
+			"cell_position": [6, 2]
+		}, {
+			"text": "6",
+			"cell_position": [6, 3]
+		}, {
+			"text": "7",
+			"cell_position": [6, 4]
+		}, {
+			"text": "6",
+			"cell_position": [6, 5]
+		}, {
+			"text": "Ireland",
+			"cell_position": [7, 0]
+		}, {
+			"text": "12",
+			"cell_position": [7, 1]
+		}, {
+			"text": "5=",
+			"cell_position": [7, 2]
+		}, {
+			"text": "3=",
+			"cell_position": [7, 3]
+		}, {
+			"text": "9",
+			"cell_position": [7, 4]
+		}, {
+			"text": "7",
+			"cell_position": [7, 5]
+		}, {
+			"text": "France",
+			"cell_position": [8, 0]
+		}, {
+			"text": "4",
+			"cell_position": [8, 1]
+		}, {
+			"text": "9",
+			"cell_position": [8, 2]
+		}, {
+			"text": "8=",
+			"cell_position": [8, 3]
+		}, {
+			"text": "8",
+			"cell_position": [8, 4]
+		}, {
+			"text": "8",
+			"cell_position": [8, 5]
+		}, {
+			"text": "Sweden",
+			"cell_position": [9, 0]
+		}, {
+			"text": "9=",
+			"cell_position": [9, 1]
+		}, {
+			"text": "7",
+			"cell_position": [9, 2]
+		}, {
+			"text": "8=",
+			"cell_position": [9, 3]
+		}, {
+			"text": "13",
+			"cell_position": [9, 4]
+		}, {
+			"text": "9",
+			"cell_position": [9, 5]
+		}, {
+			"text": "Italy",
+			"cell_position": [10, 0]
+		}, {
+			"text": "2",
+			"cell_position": [10, 1]
+		}, {
+			"text": "12",
+			"cell_position": [10, 2]
+		}, {
+			"text": "10",
+			"cell_position": [10, 3]
+		}, {
+			"text": "10=",
+			"cell_position": [10, 4]
+		}, {
+			"text": "10",
+			"cell_position": [10, 5]
+		}, {
+			"text": "Germany",
+			"cell_position": [11, 0]
+		}, {
+			"text": "13",
+			"cell_position": [11, 1]
+		}, {
+			"text": "11",
+			"cell_position": [11, 2]
+		}, {
+			"text": "11",
+			"cell_position": [11, 3]
+		}, {
+			"text": "1=",
+			"cell_position": [11, 4]
+		}, {
+			"text": "11",
+			"cell_position": [11, 5]
+		}, {
+			"text": "Belgium",
+			"cell_position": [12, 0]
+		}, {
+			"text": "9=",
+			"cell_position": [12, 1]
+		}, {
+			"text": "10",
+			"cell_position": [12, 2]
+		}, {
+			"text": "13",
+			"cell_position": [12, 3]
+		}, {
+			"text": "3",
+			"cell_position": [12, 4]
+		}, {
+			"text": "12",
+			"cell_position": [12, 5]
+		}, {
+			"text": "Austria",
+			"cell_position": [13, 0]
+		}, {
+			"text": "9=",
+			"cell_position": [13, 1]
+		}, {
+			"text": "13",
+			"cell_position": [13, 2]
+		}, {
+			"text": "12",
+			"cell_position": [13, 3]
+		}, {
+			"text": "4",
+			"cell_position": [13, 4]
+		}, {
+			"text": "13",
+			"cell_position": [13, 5]
+		}]
 	}],
-	'tax': ''
+	"due_date": [{"text": None,"page": "0"},{"text": "2019-10-13","page": "1"}],
+	
+	"invoice_id": [{"text": "#12356","page": "0"},{"text": None,"page": "1"}]
 }
 ```
 
@@ -526,13 +550,13 @@ ID | The ID of the KoiReader to delete
 <b>File Formats</b>
 
 <p>KoiReader API supports the following file types:</p>
-
+  
+  * PDF 
   * JPEG
   * PNG8
   * PNG24
   * BMP
   * WEBP
-  * PDF 
   * TIFF
 
 
