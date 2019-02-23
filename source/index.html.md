@@ -97,12 +97,12 @@ api = Kittn::APIClient.authorize!('meowmeowmeow')
 api.KoiReaders.get
 ```
 -->
-```shell
+<!-- ```shell
 curl -X POST   https://api.koireader.com/v1/analyze  
   -H 'content-type: multipart/form-data'  
   -H 'X-ApiKey: APIKEY' -F 'file=@/home/user/invoice.png'
-```
-```javascript
+``` -->
+<!-- ```javascript
 const fs = require('fs');
 const request = require('request');
 const options = {
@@ -129,7 +129,7 @@ headers = {
 }
 response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('./invoice.png', 'rb')}, headers=headers)
 print(response.json()['invoice.png'])
-``` 
+```  -->
 > The above command returns JSON structured like this:
 
 ```json
