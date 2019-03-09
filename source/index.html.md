@@ -45,7 +45,7 @@ headers = {
     "X-ApiKey": 'APIKEY'
 }
 response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('./invoice.png', 'rb')}, headers=headers)
-print(response.json()['invoice.png'])
+print(response.json())
 ```
 ```javascript
 const fs = require('fs');
@@ -63,7 +63,7 @@ const options = {
 };
 request(options, function(err, res, body) {
     if (err) console.log(err);
-    console.log(body['invoice.png']);
+    console.log(body);
 });
 ``` 
 <!-- ```ruby
@@ -134,524 +134,345 @@ print(response.json()['invoice.png'])
 
 ```json
 {
-  "invoice.png": {
-    tables: [
-      {
-        summary: [
-          [" Item", " description", " By", " For", " Cost", " Qty", " Grand Total"],
-          ["47", "Practical Phstic Hat, Handcrafted Wooden Keyboard ", "Clothing", "Ball ", "240.69", "7", "563.46"],
-          ["609", "Fantastic Granite Salad, Awesome Metal Pizza ", "Incredib Soft CtBese ", " Rustic Wooden  Keyboard ", "98817", "4", "57021"],
-          ["907", "Tasty Fresh Pants  Refined Pla\\u00fc Bke ", "Car ", "Indtstriel ", "5715", "11", "492.79"],
-          ["699", "Prantinal Rt\\u00b1ber St\\u00fct, I-Jr\\u00e5rarxied Cotton fish ", "Electrorics ", "Outdoors ", "44.42", "18", "48064"],
-          ["441", "Tasty &arite Cticken, Incredible Metal Chair ", "Shek Wooden Shoes ", "Cticken ", "98883", "11", "92857"],
-          ["268", "Awesome Rubber Shit Gorgeous Corcrete Mouse ", "Bike ", "Kids ", "774568", "", "24483"],
-          ["541", "Tasty Steel Gbves, Handmade  PhsticSboes ", "Books ", "Computers ", "685.71", "20", "25119"],
-          ["799", "Practical Phstic Gloves, Tasty  Frozen ", "Sitt ", "Shoes ", "66627", "18", "43092"],
-          ["401", "Fantastic Wooden Ball. Refirbd  Grafte Ct#s ", "Kids ", "Sausages ", "49666", "19", "26.03"],
-          ["321", "Generic Frozen Fish. Skek Soft  Shoes ", "Cheese ", "RefitBd Concrete Keyboard ", "209.79", "10", "91.76"]
-        ],
-        metadata: {
-          bbox: [ 133, 608, 626, 1005 ],
-          score: 0.98,
-          page: 0
-        },
-        cells: [
-          {
-            bbox: [ 133, 608, 162, 645 ],
-            score: 0.98,
-            cell_position: [ 0, 0 ],
-            text: " Item"
-          },
-          {
-            bbox: [ 162, 608, 334, 645 ],
-            score: 0.98,
-            cell_position: [ 0, 1 ],
-            text: " description"
-          },
-          {
-            bbox: [ 334, 608, 417, 645 ],
-            score: 0.98,
-            cell_position: [ 0, 2 ],
-            text: " By"
-          },
-          {
-            bbox: [ 417, 608, 514, 645 ],
-            score: 0.98,
-            cell_position: [ 0, 3 ],
-            text: " For"
-          },
-          {
-            bbox: [ 514, 608, 557, 645 ],
-            score: 0.98,
-            cell_position: [ 0, 4 ],
-            text: " Cost"
-          },
-          {
-            bbox: [ 557, 608, 582, 645 ],
-            score: 0.98,
-            cell_position: [ 0, 5 ],
-            text: " Qty"
-          },
-          {
-            bbox: [ 582, 608, 626, 645 ],
-            score: 0.98,
-            cell_position: [ 0, 6 ],
-            text: " Grand Total"
-          },
-          {
-            bbox: [ 133, 645, 162, 680 ],
-            score: 0.98,
-            cell_position: [ 1, 0 ],
-            text: "47"
-          },
-          {
-            bbox: [ 162, 645, 334, 680 ],
-            score: 0.98,
-            cell_position: [ 1, 1 ],
-            text: "Practical Phstic Hat, Handcrafted Wooden Keyboard "
-          },
-          {
-            bbox: [ 334, 645, 417, 680 ],
-            score: 0.98,
-            cell_position: [ 1, 2 ],
-            text: "Clothing"
-          },
-          {
-            bbox: [ 417, 645, 514, 680 ],
-            score: 0.98,
-            cell_position: [ 1, 3 ],
-            text: "Ball "
-          },
-          {
-            bbox: [ 514, 645, 557, 680 ],
-            score: 0.98,
-            cell_position: [ 1, 4 ],
-            text: "240.69"
-          },
-          {
-            bbox: [ 557, 645, 582, 680 ],
-            score: 0.98,
-            cell_position: [ 1, 5 ],
-            text: "7"
-          },
-          {
-            bbox: [ 582, 645, 626, 680 ],
-            score: 0.98,
-            cell_position: [ 1, 6 ],
-            text: "563.46"
-          },
-          {
-            bbox: [ 133, 680, 162, 718 ],
-            score: 0.98,
-            cell_position: [ 2, 0 ],
-            text: "609"
-          },
-          {
-            bbox: [ 162, 680, 334, 718 ],
-            score: 0.98,
-            cell_position: [ 2, 1 ],
-            text: "Fantastic Granite Salad, Awesome Metal Pizza "
-          },
-          {
-            bbox: [ 334, 680, 417, 718 ],
-            score: 0.98,
-            cell_position: [ 2, 2 ],
-            text: "Incredib Soft CtBese "
-          },
-          {
-            bbox: [ 417, 680, 514, 718 ],
-            score: 0.98,
-            cell_position: [ 2, 3 ],
-            text: " Rustic Wooden  Keyboard "
-          },
-          {
-            bbox: [ 514, 680, 557, 718 ],
-            score: 0.98,
-            cell_position: [ 2, 4 ],
-            text: "98817"
-          },
-          {
-            bbox: [ 557, 680, 582, 718 ],
-            score: 0.98,
-            cell_position: [ 2, 5 ],
-            text: "4"
-          },
-          {
-            bbox: [ 582, 680, 626, 718 ],
-            score: 0.98,
-            cell_position: [ 2, 6 ],
-            text: "57021"
-          },
-          {
-            bbox: [ 133, 718, 162, 753 ],
-            score: 0.98,
-            cell_position: [ 3, 0 ],
-            text: "907"
-          },
-          {
-            bbox: [ 162, 718, 334, 753 ],
-            score: 0.98,
-            cell_position: [ 3, 1 ],
-            text: "Tasty Fresh Pants  Refined Pla\\u00fc Bke "
-          },
-          {
-            bbox: [ 334, 718, 417, 753 ],
-            score: 0.98,
-            cell_position: [ 3, 2 ],
-            text: "Car "
-          },
-          {
-            bbox: [ 417, 718, 514, 753 ],
-            score: 0.98,
-            cell_position: [ 3, 3 ],
-            text: "Indtstriel "
-          },
-          {
-            bbox: [ 514, 718, 557, 753 ],
-            score: 0.98,
-            cell_position: [ 3, 4 ],
-            text: "5715"
-          },
-          {
-            bbox: [ 557, 718, 582, 753 ],
-            score: 0.98,
-            cell_position: [ 3, 5 ],
-            text: "11"
-          },
-          {
-            bbox: [ 582, 718, 626, 753 ],
-            score: 0.98,
-            cell_position: [ 3, 6 ],
-            text: "492.79"
-          },
-          {
-            bbox: [ 133, 753, 162, 789 ],
-            score: 0.98,
-            cell_position: [ 4, 0 ],
-            text: "699"
-          },
-          {
-            bbox: [ 162, 753, 334, 789 ],
-            score: 0.98,
-            cell_position: [ 4, 1 ],
-            text: "Prantinal Rt\\u00b1ber St\\u00fct, I-Jr\\u00e5rarxied Cotton fish "
-          },
-          {
-            bbox: [ 334, 753, 417, 789 ],
-            score: 0.98,
-            cell_position: [ 4, 2 ],
-            text: "Electrorics "
-          },
-          {
-            bbox: [ 417, 753, 514, 789 ],
-            score: 0.98,
-            cell_position: [ 4, 3 ],
-            text: "Outdoors "
-          },
-          {
-            bbox: [ 514, 753, 557, 789 ],
-            score: 0.98,
-            cell_position: [ 4, 4 ],
-            text: "44.42"
-          },
-          {
-            bbox: [ 557, 753, 582, 789 ],
-            score: 0.98,
-            cell_position: [ 4, 5 ],
-            text: "18"
-          },
-          {
-            bbox: [ 582, 753, 626, 789 ],
-            score: 0.98,
-            cell_position: [ 4, 6 ],
-            text: "48064"
-          },
-          {
-            bbox: [ 133, 789, 162, 825 ],
-            score: 0.98,
-            cell_position: [ 5, 0 ],
-            text: "441"
-          },
-          {
-            bbox: [ 162, 789, 334, 825 ],
-            score: 0.98,
-            cell_position: [ 5, 1 ],
-            text: "Tasty &arite Cticken, Incredible Metal Chair "
-          },
-          {
-            bbox: [ 334, 789, 417, 825 ],
-            score: 0.98,
-            cell_position: [ 5, 2 ],
-            text: "Shek Wooden Shoes "
-          },
-          {
-            bbox: [ 417, 789, 514, 825 ],
-            score: 0.98,
-            cell_position: [ 5, 3 ],
-            text: "Cticken "
-          },
-          {
-            bbox: [ 514, 789, 557, 825 ],
-            score: 0.98,
-            cell_position: [ 5, 4 ],
-            text: "98883"
-          },
-          {
-            bbox: [ 557, 789, 582, 825 ],
-            score: 0.98,
-            cell_position: [ 5, 5 ],
-            text: "11"
-          },
-          {
-            bbox: [ 582, 789, 626, 825 ],
-            score: 0.98,
-            cell_position: [ 5, 6 ],
-            text: "92857"
-          },
-          {
-            bbox: [ 133, 825, 162, 861 ],
-            score: 0.98,
-            cell_position: [ 6, 0 ],
-            text: "268"
-          },
-          {
-            bbox: [ 162, 825, 334, 861 ],
-            score: 0.98,
-            cell_position: [ 6, 1 ],
-            text: "Awesome Rubber Shit Gorgeous Corcrete Mouse "
-          },
-          {
-            bbox: [ 334, 825, 417, 861 ],
-            score: 0.98,
-            cell_position: [ 6, 2 ],
-            text: "Bike "
-          },
-          {
-            bbox: [ 417, 825, 514, 861 ],
-            score: 0.98,
-            cell_position: [ 6, 3 ],
-            text: "Kids "
-          },
-          {
-            bbox: [ 514, 825, 557, 861 ],
-            score: 0.98,
-            cell_position: [ 6, 4 ],
-            text: "774568"
-          },
-          {
-            bbox: [ 557, 825, 582, 861 ],
-            score: 0.98,
-            cell_position: [ 6, 5 ],
-            text: ""
-          },
-          {
-            bbox: [ 582, 825, 626, 861 ],
-            score: 0.98,
-            cell_position: [ 6, 6 ],
-            text: "24483"
-          },
-          {
-            bbox: [ 133, 861, 162, 897 ],
-            score: 0.98,
-            cell_position: [ 7, 0 ],
-            text: "541"
-          },
-          {
-            bbox: [ 162, 861, 334, 897 ],
-            score: 0.98,
-            cell_position: [ 7, 1 ],
-            text: "Tasty Steel Gbves, Handmade  PhsticSboes "
-          },
-          {
-            bbox: [ 334, 861, 417, 897 ],
-            score: 0.98,
-            cell_position: [ 7, 2 ],
-            text: "Books "
-          },
-          {
-            bbox: [ 417, 861, 514, 897 ],
-            score: 0.98,
-            cell_position: [ 7, 3 ],
-            text: "Computers "
-          },
-          {
-            bbox: [ 514, 861, 557, 897 ],
-            score: 0.98,
-            cell_position: [ 7, 4 ],
-            text: "685.71"
-          },
-          {
-            bbox: [ 557, 861, 582, 897 ],
-            score: 0.98,
-            cell_position: [ 7, 5 ],
-            text: "20"
-          },
-          {
-            bbox: [ 582, 861, 626, 897 ],
-            score: 0.98,
-            cell_position: [ 7, 6 ],
-            text: "25119"
-          },
-          {
-            bbox: [ 133, 897, 162, 933 ],
-            score: 0.98,
-            cell_position: [ 8, 0 ],
-            text: "799"
-          },
-          {
-            bbox: [ 162, 897, 334, 933 ],
-            score: 0.98,
-            cell_position: [ 8, 1 ],
-            text: "Practical Phstic Gloves, Tasty  Frozen "
-          },
-          {
-            bbox: [ 334, 897, 417, 933 ],
-            score: 0.98,
-            cell_position: [ 8, 2 ],
-            text: "Sitt "
-          },
-          {
-            bbox: [ 417, 897, 514, 933 ],
-            score: 0.98,
-            cell_position: [ 8, 3 ],
-            text: "Shoes "
-          },
-          {
-            bbox: [ 514, 897, 557, 933 ],
-            score: 0.98,
-            cell_position: [ 8, 4 ],
-            text: "66627"
-          },
-          {
-            bbox: [ 557, 897, 582, 933 ],
-            score: 0.98,
-            cell_position: [ 8, 5 ],
-            text: "18"
-          },
-          {
-            bbox: [ 582, 897, 626, 933 ],
-            score: 0.98,
-            cell_position: [ 8, 6 ],
-            text: "43092"
-          },
-          {
-            bbox: [ 133, 933, 162, 970 ],
-            score: 0.98,
-            cell_position: [ 9, 0 ],
-            text: "401"
-          },
-          {
-            bbox: [ 162, 933, 334, 970 ],
-            score: 0.98,
-            cell_position: [ 9, 1 ],
-            text: "Fantastic Wooden Ball. Refirbd  Grafte Ct#s "
-          },
-          {
-            bbox: [ 334, 933, 417, 970 ],
-            score: 0.98,
-            cell_position: [ 9, 2 ],
-            text: "Kids "
-          },
-          {
-            bbox: [ 417, 933, 514, 970 ],
-            score: 0.98,
-            cell_position: [ 9, 3 ],
-            text: "Sausages "
-          },
-          {
-            bbox: [ 514, 933, 557, 970 ],
-            score: 0.98,
-            cell_position: [ 9, 4 ],
-            text: "49666"
-          },
-          {
-            bbox: [ 557, 933, 582, 970 ],
-            score: 0.98,
-            cell_position: [ 9, 5 ],
-            text: "19"
-          },
-          {
-            bbox: [ 582, 933, 626, 970 ],
-            score: 0.98,
-            cell_position: [ 9, 6 ],
-            text: "26.03"
-          },
-          {
-            bbox: [ 133, 970, 162, 1005 ],
-            score: 0.98,
-            cell_position: [ 10, 0 ],
-            text: "321"
-          },
-          {
-            bbox: [ 162, 970, 334, 1005 ],
-            score: 0.98,
-            cell_position: [ 10, 1 ],
-            text: "Generic Frozen Fish. Skek Soft  Shoes "
-          },
-          {
-            bbox: [ 334, 970, 417, 1005 ],
-            score: 0.98,
-            cell_position: [ 10, 2 ],
-            text: "Cheese "
-          },
-          {
-            bbox: [ 417, 970, 514, 1005 ],
-            score: 0.98,
-            cell_position: [ 10, 3 ],
-            text: "RefitBd Concrete Keyboard "
-          },
-          {
-            bbox: [ 514, 970, 557, 1005 ],
-            score: 0.98,
-            cell_position: [ 10, 4 ],
-            text: "209.79"
-          },
-          {
-            bbox: [ 557, 970, 582, 1005 ],
-            score: 0.98,
-            cell_position: [ 10, 5 ],
-            text: "10"
-          },
-          {
-            bbox: [ 582, 970, 626, 1005 ],
-            score: 0.98,
-            cell_position: [ 10, 6 ],
-            text: "91.76"
-          }
-        ]
-      }
-    ],
-    billing_address: [
-      {
-        text: "Bill to A\"oss\nMathis\nAddress : 241 Zekim\nPi-ore",
-        page: 0
-      }
-    ],
-    origin_address: [
-      {
-        text: "nv\\u00fce from\nyone Corp\nebsite : pogulecu.com\n033 Gohasi Place. Ofiam Averu. SM\nj@coideby",
-        page: 0
-      }
-    ],
-    delivery_address: [
-      {
-        text: "Address : 1422 Sip to\nName : Jerome Roberson\nav@fus.sh\nJ (678)3914200",
-        page: 0
-      }
-    ],
-    tax: [ { text: null, page: 0 } ],
-    detected_total: [ { text: "$1254.50", page: 0 } ],
-    detected_subtotal: [ { text: null, page: 0 } ],
-    discount: [ { text: "15%", page: 0 } ],
-    due_date: [ { text: null, page: 0 } ],
-    invoice_id: [ { text: "#AE3457", page: 0 } ],
-    status: true,
-    metadata: {
-      info: "Detected Table",
-      dimensions: [ 1200, 763, 3 ],
-      num_of_pages: 1
-    }
-  }
+	"status": true,
+	"data": [{
+		"tables": [{
+			"summary": [
+				[" Summary ", " By ", "To", "No. Of Items", " Amount?"],
+				["Bukmizu imo tukcez uwfih ducag bipew innasi weufogo UWUiSU ud tuecika cika hubmiw wuei iewsuc. ", "Home ", "Beauty ", "4", "633.84"],
+				["Piko num  te biknai nedhi tarbor efivotri atpu  cicom paio mufiuiiu otizekom  li me. ", "Automotive", "Garden ", "78", "702.56"],
+				["Keyboard ", "Table ", "Clothing", "", "530.06"],
+				["Gloves ", "Fish ", "Books ", "76", "335.77"],
+				["Da vosom zapi naiop vabeh oronovmu tolbigu hef wa uniec bavfopem  ki nitoz por dihomre  buzci iefoben. ", "Incredible  Wooden  Chicken ", "Gorgeous Fresh  Table ", "9", "632.87"],
+				["Salad ", "Chair ", "Ergonomic Frozen  Shoes ", "WV", "703.76"],
+				["Mouse ", "Chips ", "Shoes ", "8", "763.79"],
+				["Bacon ", "Handcrafted Wooden  Computer ", "Licensed Steel  Salad ", "77", "250.27"],
+				["Li udigadew si eb fa tev naruple uwi wikelgu  mezbez vevba lasiapevu nizzicu hosui  omidocoh. ", "Hat ", "Books ", "7", "970.63"],
+				["Riumuvo buflopro duvedo faiuro unoravgi  cuseei ka ofi munbutus onniis zodiuha se  wihemmi io genpu vowziwpah kug luci. ", "Gloves ", "Baby ", "", "287.87"]
+			],
+			"metadata": {
+				"bbox": [83, 479, 698, 1063],
+				"score": 0.9800000191,
+				"page": 0
+			},
+			"cells": [{
+				"bbox": [83, 479, 411, 542],
+				"score": 0.9800000191,
+				"cellPosition": [0, 0],
+				"text": " Summary "
+			}, {
+				"bbox": [411, 479, 508, 542],
+				"score": 0.9800000191,
+				"cellPosition": [0, 1],
+				"text": " By "
+			}, {
+				"bbox": [508, 479, 590, 542],
+				"score": 0.9800000191,
+				"cellPosition": [0, 2],
+				"text": "To"
+			}, {
+				"bbox": [590, 479, 638, 542],
+				"score": 0.9800000191,
+				"cellPosition": [0, 3],
+				"text": "No. Of Items"
+			}, {
+				"bbox": [638, 479, 698, 542],
+				"score": 0.9800000191,
+				"cellPosition": [0, 4],
+				"text": " Amount?"
+			}, {
+				"bbox": [83, 542, 411, 609],
+				"score": 0.9800000191,
+				"cellPosition": [1, 0],
+				"text": "Bukmizu imo tukcez uwfih ducag bipew innasi weufogo UWUiSU ud tuecika cika hubmiw wuei iewsuc. "
+			}, {
+				"bbox": [411, 542, 508, 609],
+				"score": 0.9800000191,
+				"cellPosition": [1, 1],
+				"text": "Home "
+			}, {
+				"bbox": [508, 542, 590, 609],
+				"score": 0.9800000191,
+				"cellPosition": [1, 2],
+				"text": "Beauty "
+			}, {
+				"bbox": [590, 542, 638, 609],
+				"score": 0.9800000191,
+				"cellPosition": [1, 3],
+				"text": "4"
+			}, {
+				"bbox": [638, 542, 698, 609],
+				"score": 0.9800000191,
+				"cellPosition": [1, 4],
+				"text": "633.84"
+			}, {
+				"bbox": [83, 609, 411, 656],
+				"score": 0.9800000191,
+				"cellPosition": [2, 0],
+				"text": "Piko num  te biknai nedhi tarbor efivotri atpu  cicom paio mufiuiiu otizekom  li me. "
+			}, {
+				"bbox": [411, 609, 508, 656],
+				"score": 0.9800000191,
+				"cellPosition": [2, 1],
+				"text": "Automotive"
+			}, {
+				"bbox": [508, 609, 590, 656],
+				"score": 0.9800000191,
+				"cellPosition": [2, 2],
+				"text": "Garden "
+			}, {
+				"bbox": [590, 609, 638, 656],
+				"score": 0.9800000191,
+				"cellPosition": [2, 3],
+				"text": "78"
+			}, {
+				"bbox": [638, 609, 698, 656],
+				"score": 0.9800000191,
+				"cellPosition": [2, 4],
+				"text": "702.56"
+			}, {
+				"bbox": [83, 656, 411, 681],
+				"score": 0.9800000191,
+				"cellPosition": [3, 0],
+				"text": "Keyboard "
+			}, {
+				"bbox": [411, 656, 508, 681],
+				"score": 0.9800000191,
+				"cellPosition": [3, 1],
+				"text": "Table "
+			}, {
+				"bbox": [508, 656, 590, 681],
+				"score": 0.9800000191,
+				"cellPosition": [3, 2],
+				"text": "Clothing"
+			}, {
+				"bbox": [590, 656, 638, 681],
+				"score": 0.9800000191,
+				"cellPosition": [3, 3]
+			}, {
+				"bbox": [638, 656, 698, 681],
+				"score": 0.9800000191,
+				"cellPosition": [3, 4],
+				"text": "530.06"
+			}, {
+				"bbox": [83, 681, 411, 708],
+				"score": 0.9800000191,
+				"cellPosition": [4, 0],
+				"text": "Gloves "
+			}, {
+				"bbox": [411, 681, 508, 708],
+				"score": 0.9800000191,
+				"cellPosition": [4, 1],
+				"text": "Fish "
+			}, {
+				"bbox": [508, 681, 590, 708],
+				"score": 0.9800000191,
+				"cellPosition": [4, 2],
+				"text": "Books "
+			}, {
+				"bbox": [590, 681, 638, 708],
+				"score": 0.9800000191,
+				"cellPosition": [4, 3],
+				"text": "76"
+			}, {
+				"bbox": [638, 681, 698, 708],
+				"score": 0.9800000191,
+				"cellPosition": [4, 4],
+				"text": "335.77"
+			}, {
+				"bbox": [83, 708, 411, 774],
+				"score": 0.9800000191,
+				"cellPosition": [5, 0],
+				"text": "Da vosom zapi naiop vabeh oronovmu tolbigu hef wa uniec bavfopem  ki nitoz por dihomre  buzci iefoben. "
+			}, {
+				"bbox": [411, 708, 508, 774],
+				"score": 0.9800000191,
+				"cellPosition": [5, 1],
+				"text": "Incredible  Wooden  Chicken "
+			}, {
+				"bbox": [508, 708, 590, 774],
+				"score": 0.9800000191,
+				"cellPosition": [5, 2],
+				"text": "Gorgeous Fresh  Table "
+			}, {
+				"bbox": [590, 708, 638, 774],
+				"score": 0.9800000191,
+				"cellPosition": [5, 3],
+				"text": "9"
+			}, {
+				"bbox": [638, 708, 698, 774],
+				"score": 0.9800000191,
+				"cellPosition": [5, 4],
+				"text": "632.87"
+			}, {
+				"bbox": [83, 774, 411, 838],
+				"score": 0.9800000191,
+				"cellPosition": [6, 0],
+				"text": "Salad "
+			}, {
+				"bbox": [411, 774, 508, 838],
+				"score": 0.9800000191,
+				"cellPosition": [6, 1],
+				"text": "Chair "
+			}, {
+				"bbox": [508, 774, 590, 838],
+				"score": 0.9800000191,
+				"cellPosition": [6, 2],
+				"text": "Ergonomic Frozen  Shoes "
+			}, {
+				"bbox": [590, 774, 638, 838],
+				"score": 0.9800000191,
+				"cellPosition": [6, 3],
+				"text": "WV"
+			}, {
+				"bbox": [638, 774, 698, 838],
+				"score": 0.9800000191,
+				"cellPosition": [6, 4],
+				"text": "703.76"
+			}, {
+				"bbox": [83, 838, 411, 862],
+				"score": 0.9800000191,
+				"cellPosition": [7, 0],
+				"text": "Mouse "
+			}, {
+				"bbox": [411, 838, 508, 862],
+				"score": 0.9800000191,
+				"cellPosition": [7, 1],
+				"text": "Chips "
+			}, {
+				"bbox": [508, 838, 590, 862],
+				"score": 0.9800000191,
+				"cellPosition": [7, 2],
+				"text": "Shoes "
+			}, {
+				"bbox": [590, 838, 638, 862],
+				"score": 0.9800000191,
+				"cellPosition": [7, 3],
+				"text": "8"
+			}, {
+				"bbox": [638, 838, 698, 862],
+				"score": 0.9800000191,
+				"cellPosition": [7, 4],
+				"text": "763.79"
+			}, {
+				"bbox": [83, 862, 411, 930],
+				"score": 0.9800000191,
+				"cellPosition": [8, 0],
+				"text": "Bacon "
+			}, {
+				"bbox": [411, 862, 508, 930],
+				"score": 0.9800000191,
+				"cellPosition": [8, 1],
+				"text": "Handcrafted Wooden  Computer "
+			}, {
+				"bbox": [508, 862, 590, 930],
+				"score": 0.9800000191,
+				"cellPosition": [8, 2],
+				"text": "Licensed Steel  Salad "
+			}, {
+				"bbox": [590, 862, 638, 930],
+				"score": 0.9800000191,
+				"cellPosition": [8, 3],
+				"text": "77"
+			}, {
+				"bbox": [638, 862, 698, 930],
+				"score": 0.9800000191,
+				"cellPosition": [8, 4],
+				"text": "250.27"
+			}, {
+				"bbox": [83, 930, 411, 995],
+				"score": 0.9800000191,
+				"cellPosition": [9, 0],
+				"text": "Li udigadew si eb fa tev naruple uwi wikelgu  mezbez vevba lasiapevu nizzicu hosui  omidocoh. "
+			}, {
+				"bbox": [411, 930, 508, 995],
+				"score": 0.9800000191,
+				"cellPosition": [9, 1],
+				"text": "Hat "
+			}, {
+				"bbox": [508, 930, 590, 995],
+				"score": 0.9800000191,
+				"cellPosition": [9, 2],
+				"text": "Books "
+			}, {
+				"bbox": [590, 930, 638, 995],
+				"score": 0.9800000191,
+				"cellPosition": [9, 3],
+				"text": "7"
+			}, {
+				"bbox": [638, 930, 698, 995],
+				"score": 0.9800000191,
+				"cellPosition": [9, 4],
+				"text": "970.63"
+			}, {
+				"bbox": [83, 995, 411, 1063],
+				"score": 0.9800000191,
+				"cellPosition": [10, 0],
+				"text": "Riumuvo buflopro duvedo faiuro unoravgi  cuseei ka ofi munbutus onniis zodiuha se  wihemmi io genpu vowziwpah kug luci. "
+			}, {
+				"bbox": [411, 995, 508, 1063],
+				"score": 0.9800000191,
+				"cellPosition": [10, 1],
+				"text": "Gloves "
+			}, {
+				"bbox": [508, 995, 590, 1063],
+				"score": 0.9800000191,
+				"cellPosition": [10, 2],
+				"text": "Baby "
+			}, {
+				"bbox": [590, 995, 638, 1063],
+				"score": 0.9800000191,
+				"cellPosition": [10, 3]
+			}, {
+				"bbox": [638, 995, 698, 1063],
+				"score": 0.9800000191,
+				"cellPosition": [10, 4],
+				"text": "287.87"
+			}]
+		}],
+		"billingAddress": [{
+			"text": "Billing Edress\n2000 Logwof Place, Soto Court\nDugikfu, GA, HT\nfo.to\nPhone: (467) 348-5266, E-mail:\nOmer83@hotmail.com"
+		}],
+		"originAddress": [{
+			"text": "Gibson - Carroll\nVersatile dynamic algorithm\n7454 Lussol Lane, Olie Center\nEcfogso, IL, SH\nfo.ci\nPhone: 7-570-089-2277, E-mail:\nLucious79@gmail.com"
+		}],
+		"deliveryAddress": [{
+			"text": "Shipping to\n7 936 Pupta Extension, Ukida Loop\nSugalec, OK, Fl\nkagono.pf\nPhone: 7-780-736-2757, E-mail:\nJohnathon 95@hotmail.com"
+		}],
+		"tax": [{
+			"text": null,
+			"page": 0
+		}],
+		"detectedTotal": [{
+			"text": null,
+			"page": 0
+		}],
+		"detectedSubtotal": [{
+			"text": null,
+			"page": 0
+		}],
+		"discount": [{
+			"text": null,
+			"page": 0
+		}],
+		"dueDate": [{
+			"text": "2108-02-21"
+		}],
+		"invoiceDate": [{
+			"text": "2108-02-21"
+		}],
+		"invoiceId": [{
+			"text": "#24c75d2d"
+		}],
+		"metadata": {
+			"info": "Detected Table",
+			"dimensions": [1257, 1115],
+			"numOfPages": 1,
+			"docname": "file-2.png"
+		},
+		"status": true
+	}],
+	"statusMessage": "Processed"
 }
 ```
 
