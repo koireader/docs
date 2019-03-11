@@ -28,7 +28,7 @@ We have currently enlisted language bindings for Shell, Node.js, and Python. You
 
 # Authentication
 
-> To authorize, use this code:
+> To connect, use this code:
 
 ```shell
 # With shell, you can just pass the correct header with each request
@@ -138,7 +138,7 @@ print(response.json()['invoice.png'])
 	"data": [{
 		"tables": [{
 			"summary": [
-				[" Summary ", " By ", "To", "No. Of Items", " Amount?"],
+				[" Summary ", " By ", "To", "No. Of Items", " Amount"],
 				["Bukmizu imo tukcez uwfih ducag bipew innasi weufogo UWUiSU ud tuecika cika hubmiw wuei iewsuc. ", "Home ", "Beauty ", "4", "633.84"],
 				["Piko num  te biknai nedhi tarbor efivotri atpu  cicom paio mufiuiiu otizekom  li me. ", "Automotive", "Garden ", "78", "702.56"],
 				["Keyboard ", "Table ", "Clothing", "", "530.06"],
@@ -152,280 +152,280 @@ print(response.json()['invoice.png'])
 			],
 			"metadata": {
 				"bbox": [83, 479, 698, 1063],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"page": 0
 			},
 			"cells": [{
 				"bbox": [83, 479, 411, 542],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [0, 0],
 				"text": " Summary "
 			}, {
 				"bbox": [411, 479, 508, 542],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [0, 1],
 				"text": " By "
 			}, {
 				"bbox": [508, 479, 590, 542],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [0, 2],
 				"text": "To"
 			}, {
 				"bbox": [590, 479, 638, 542],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [0, 3],
 				"text": "No. Of Items"
 			}, {
 				"bbox": [638, 479, 698, 542],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [0, 4],
 				"text": " Amount?"
 			}, {
 				"bbox": [83, 542, 411, 609],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [1, 0],
 				"text": "Bukmizu imo tukcez uwfih ducag bipew innasi weufogo UWUiSU ud tuecika cika hubmiw wuei iewsuc. "
 			}, {
 				"bbox": [411, 542, 508, 609],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [1, 1],
 				"text": "Home "
 			}, {
 				"bbox": [508, 542, 590, 609],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [1, 2],
 				"text": "Beauty "
 			}, {
 				"bbox": [590, 542, 638, 609],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [1, 3],
 				"text": "4"
 			}, {
 				"bbox": [638, 542, 698, 609],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [1, 4],
 				"text": "633.84"
 			}, {
 				"bbox": [83, 609, 411, 656],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [2, 0],
 				"text": "Piko num  te biknai nedhi tarbor efivotri atpu  cicom paio mufiuiiu otizekom  li me. "
 			}, {
 				"bbox": [411, 609, 508, 656],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [2, 1],
 				"text": "Automotive"
 			}, {
 				"bbox": [508, 609, 590, 656],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [2, 2],
 				"text": "Garden "
 			}, {
 				"bbox": [590, 609, 638, 656],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [2, 3],
 				"text": "78"
 			}, {
 				"bbox": [638, 609, 698, 656],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [2, 4],
 				"text": "702.56"
 			}, {
 				"bbox": [83, 656, 411, 681],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [3, 0],
 				"text": "Keyboard "
 			}, {
 				"bbox": [411, 656, 508, 681],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [3, 1],
 				"text": "Table "
 			}, {
 				"bbox": [508, 656, 590, 681],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [3, 2],
 				"text": "Clothing"
 			}, {
 				"bbox": [590, 656, 638, 681],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [3, 3]
 			}, {
 				"bbox": [638, 656, 698, 681],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [3, 4],
 				"text": "530.06"
 			}, {
 				"bbox": [83, 681, 411, 708],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [4, 0],
 				"text": "Gloves "
 			}, {
 				"bbox": [411, 681, 508, 708],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [4, 1],
 				"text": "Fish "
 			}, {
 				"bbox": [508, 681, 590, 708],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [4, 2],
 				"text": "Books "
 			}, {
 				"bbox": [590, 681, 638, 708],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [4, 3],
 				"text": "76"
 			}, {
 				"bbox": [638, 681, 698, 708],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [4, 4],
 				"text": "335.77"
 			}, {
 				"bbox": [83, 708, 411, 774],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [5, 0],
 				"text": "Da vosom zapi naiop vabeh oronovmu tolbigu hef wa uniec bavfopem  ki nitoz por dihomre  buzci iefoben. "
 			}, {
 				"bbox": [411, 708, 508, 774],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [5, 1],
 				"text": "Incredible  Wooden  Chicken "
 			}, {
 				"bbox": [508, 708, 590, 774],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [5, 2],
 				"text": "Gorgeous Fresh  Table "
 			}, {
 				"bbox": [590, 708, 638, 774],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [5, 3],
 				"text": "9"
 			}, {
 				"bbox": [638, 708, 698, 774],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [5, 4],
 				"text": "632.87"
 			}, {
 				"bbox": [83, 774, 411, 838],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [6, 0],
 				"text": "Salad "
 			}, {
 				"bbox": [411, 774, 508, 838],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [6, 1],
 				"text": "Chair "
 			}, {
 				"bbox": [508, 774, 590, 838],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [6, 2],
 				"text": "Ergonomic Frozen  Shoes "
 			}, {
 				"bbox": [590, 774, 638, 838],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [6, 3],
 				"text": "WV"
 			}, {
 				"bbox": [638, 774, 698, 838],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [6, 4],
 				"text": "703.76"
 			}, {
 				"bbox": [83, 838, 411, 862],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [7, 0],
 				"text": "Mouse "
 			}, {
 				"bbox": [411, 838, 508, 862],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [7, 1],
 				"text": "Chips "
 			}, {
 				"bbox": [508, 838, 590, 862],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [7, 2],
 				"text": "Shoes "
 			}, {
 				"bbox": [590, 838, 638, 862],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [7, 3],
 				"text": "8"
 			}, {
 				"bbox": [638, 838, 698, 862],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [7, 4],
 				"text": "763.79"
 			}, {
 				"bbox": [83, 862, 411, 930],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [8, 0],
 				"text": "Bacon "
 			}, {
 				"bbox": [411, 862, 508, 930],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [8, 1],
 				"text": "Handcrafted Wooden  Computer "
 			}, {
 				"bbox": [508, 862, 590, 930],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [8, 2],
 				"text": "Licensed Steel  Salad "
 			}, {
 				"bbox": [590, 862, 638, 930],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [8, 3],
 				"text": "77"
 			}, {
 				"bbox": [638, 862, 698, 930],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [8, 4],
 				"text": "250.27"
 			}, {
 				"bbox": [83, 930, 411, 995],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [9, 0],
 				"text": "Li udigadew si eb fa tev naruple uwi wikelgu  mezbez vevba lasiapevu nizzicu hosui  omidocoh. "
 			}, {
 				"bbox": [411, 930, 508, 995],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [9, 1],
 				"text": "Hat "
 			}, {
 				"bbox": [508, 930, 590, 995],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [9, 2],
 				"text": "Books "
 			}, {
 				"bbox": [590, 930, 638, 995],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [9, 3],
 				"text": "7"
 			}, {
 				"bbox": [638, 930, 698, 995],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [9, 4],
 				"text": "970.63"
 			}, {
 				"bbox": [83, 995, 411, 1063],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [10, 0],
 				"text": "Riumuvo buflopro duvedo faiuro unoravgi  cuseei ka ofi munbutus onniis zodiuha se  wihemmi io genpu vowziwpah kug luci. "
 			}, {
 				"bbox": [411, 995, 508, 1063],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [10, 1],
 				"text": "Gloves "
 			}, {
 				"bbox": [508, 995, 590, 1063],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [10, 2],
 				"text": "Baby "
 			}, {
 				"bbox": [590, 995, 638, 1063],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [10, 3]
 			}, {
 				"bbox": [638, 995, 698, 1063],
-				"score": 0.9800000191,
+				"score": 0.98,
 				"cellPosition": [10, 4],
 				"text": "287.87"
 			}]
@@ -459,7 +459,8 @@ print(response.json()['invoice.png'])
 			"text": "2108-02-21"
 		}],
 		"invoiceDate": [{
-			"text": "2108-02-21"
+			"text": null,
+			"page": 0
 		}],
 		"invoiceId": [{
 			"text": "#24c75d2d"
