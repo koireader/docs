@@ -47,7 +47,17 @@ headers = {
 response = requests.post('https://api.koireader.com/v1/order/digitize', files={'file': open('./invoice.png', 'rb')}, headers=headers)
 print(response.json())
 ```
+> Make sure to enter a valid image path and replace <code>APIKEY</code> with your API key .
 
+> The above command returns JSON structured like this:
+
+```json
+{
+    "_id": "ck2q6j8mg00030rbccpzblctv",
+    "status": true,
+    "statusMessage": "Document Uploaded"
+}
+```
 <!-- ```javascript
 const fs = require('fs');
 const request = require('request');
@@ -74,7 +84,7 @@ api = Kittn::APIClient.authorize!('meowmeowmeow')
 ``` -->
 
 
-> Make sure to enter a valid image path and replace <code>APIKEY</code> with your API key .
+
 
 Authenticate your account by including your API key in API requests. You can generate or change your API key using the <a href='https://dev.koireader.com' target='_blank'>Dashboard</a>. Your API key carries many privileges, so be sure to keep them secure! Do not share your API key in publicly accessible areas such as GitHub, client-side code, and so forth.
 
@@ -131,15 +141,7 @@ headers = {
 response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('./invoice.png', 'rb')}, headers=headers)
 print(response.json()['invoice.png'])
 ```  -->
-> The above command returns JSON structured like this:
 
-```json
-{
-    "_id": "ck2q6j8mg00030rbccpzblctv",
-    "status": true,
-    "statusMessage": "Document Uploaded"
-}
-```
 > To receive response, use this code:
 
 ```python
@@ -147,9 +149,10 @@ import requests
 headers = { 
     "X-ApiKey": 'APIKEY'
 }
-response = requests.get('https://api.koireader.com/v1/order/digitize?id=ck2q6j8mg00030rbccpzblctv', headers=headers)
+response = requests.get('https://api.koireader.com/v1/order/digitize?id=UNIQUE_ID', headers=headers)
 print(response.json())
 ```
+> Make sure to replace the <code>UNIQUE_ID</code> with the the value of <code>_id</code> which you have received from the upload API call 
 
 > The above command returns JSON structured like this:
 
