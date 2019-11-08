@@ -2,8 +2,8 @@
 title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell : Shell
-  - javascript : Node.js
+#   - shell : Shell
+#   - javascript : Node.js
   #- ruby
   - python : Python
   # - javascript
@@ -28,15 +28,15 @@ We have currently enlisted language bindings for Shell, Node.js, and Python. You
 
 # Authentication
 
-> To connect, use this code:
+> To upload, use this code:
 
-```shell
+<!-- ```shell
 # With shell, you can just pass the correct header with each request
 
   curl -X POST   https://api.koireader.com/v1/analyze  
     -H 'content-type: multipart/form-data' 
     -H 'X-ApiKey: APIKEY' -F 'file=@/home/user/invoice.png'
-```
+``` -->
 
  
 ```python
@@ -44,10 +44,11 @@ import requests
 headers = { 
     "X-ApiKey": 'APIKEY'
 }
-response = requests.post('https://api.koireader.com/v1/analyze', files={'file': open('./invoice.png', 'rb')}, headers=headers)
+response = requests.post('https://api.koireader.com/v1/order/digitize', files={'file': open('./invoice.png', 'rb')}, headers=headers)
 print(response.json())
 ```
-```javascript
+
+<!-- ```javascript
 const fs = require('fs');
 const request = require('request');
 const options = {
@@ -65,7 +66,7 @@ request(options, function(err, res, body) {
     if (err) console.log(err);
     console.log(body);
 });
-``` 
+```  -->
 <!-- ```ruby
 require 'kittn'
 
@@ -134,347 +135,1326 @@ print(response.json()['invoice.png'])
 
 ```json
 {
-	"status": true,
-	"data": [{
-		"tables": [{
-			"summary": [
-				["Item ", " W Product Dells", " To ", " Charges", " W quantity", "Grand  Total"],
-				["631", "Generic Fresh Pizza Sleek Frozen Tuna ", "Computers", "368.57", "5", "872.88"],
-				["704", "Generic Frozen Bike,  Handmade Granite Mouse", "Sleek son  Table ", "237.37", "20", "268.38"],
-				["88", "Unbranded Granite Hat,  Small Plastic Cheese ", "Unbranded Fresh Car ", "586.62", "9", "723.25"],
-				["548", "Practical Metal Car, Generic  Soap ", "Gloves ", "475.25", "1", "838.03"],
-				["902", "Practical Wooden PA  Unbranded  Bike ", "Small  Wooden  Char ", "367.49", "10", "446.08"],
-				["569", "Ergonomic Rubber Shoes, Unbranded Wooden  Computer ", "Computers", "18.08", "13", "759.29"],
-				["776", "Tasy Frozen Cheese,  Rustic Concrete Tuna ", "Games", "75.72", "14", "619.96"],
-				["597", "Ergonomic Frozen Fish,  TasW Plastic Mouse ", "Practical  Rubber  Shoes ", "548.62", "13", "665.91"]
-			],
-			"metadata": {
-				"bbox": [72, 564, 574, 1007],
-				"score": 0.98,
-				"page": 0
-			},
-			"cells": [{
-				"bbox": [72, 564, 106, 608],
-				"score": 0.98,
-				"cellPosition": [0, 0],
-				"text": "Item "
-			}, {
-				"bbox": [106, 564, 297, 608],
-				"score": 0.98,
-				"cellPosition": [0, 1],
-				"text": " W Product Dells"
-			}, {
-				"bbox": [297, 564, 391, 608],
-				"score": 0.98,
-				"cellPosition": [0, 2],
-				"text": " To "
-			}, {
-				"bbox": [391, 564, 458, 608],
-				"score": 0.98,
-				"cellPosition": [0, 3],
-				"text": " Charges"
-			}, {
-				"bbox": [458, 564, 522, 608],
-				"score": 0.98,
-				"cellPosition": [0, 4],
-				"text": " W quantity"
-			}, {
-				"bbox": [522, 564, 574, 608],
-				"score": 0.98,
-				"cellPosition": [0, 5],
-				"text": "Grand  Total"
-			}, {
-				"bbox": [72, 608, 106, 652],
-				"score": 0.98,
-				"cellPosition": [1, 0],
-				"text": "631"
-			}, {
-				"bbox": [106, 608, 297, 652],
-				"score": 0.98,
-				"cellPosition": [1, 1],
-				"text": "Generic Fresh Pizza Sleek Frozen Tuna "
-			}, {
-				"bbox": [297, 608, 391, 652],
-				"score": 0.98,
-				"cellPosition": [1, 2],
-				"text": "Computers"
-			}, {
-				"bbox": [391, 608, 458, 652],
-				"score": 0.98,
-				"cellPosition": [1, 3],
-				"text": "368.57"
-			}, {
-				"bbox": [458, 608, 522, 652],
-				"score": 0.98,
-				"cellPosition": [1, 4],
-				"text": "5"
-			}, {
-				"bbox": [522, 608, 574, 652],
-				"score": 0.98,
-				"cellPosition": [1, 5],
-				"text": "872.88"
-			}, {
-				"bbox": [72, 652, 106, 696],
-				"score": 0.98,
-				"cellPosition": [2, 0],
-				"text": "704"
-			}, {
-				"bbox": [106, 652, 297, 696],
-				"score": 0.98,
-				"cellPosition": [2, 1],
-				"text": "Generic Frozen Bike,  Handmade Granite Mouse"
-			}, {
-				"bbox": [297, 652, 391, 696],
-				"score": 0.98,
-				"cellPosition": [2, 2],
-				"text": "Sleek son  Table "
-			}, {
-				"bbox": [391, 652, 458, 696],
-				"score": 0.98,
-				"cellPosition": [2, 3],
-				"text": "237.37"
-			}, {
-				"bbox": [458, 652, 522, 696],
-				"score": 0.98,
-				"cellPosition": [2, 4],
-				"text": "20"
-			}, {
-				"bbox": [522, 652, 574, 696],
-				"score": 0.98,
-				"cellPosition": [2, 5],
-				"text": "268.38"
-			}, {
-				"bbox": [72, 696, 106, 738],
-				"score": 0.98,
-				"cellPosition": [3, 0],
-				"text": "88"
-			}, {
-				"bbox": [106, 696, 297, 738],
-				"score": 0.98,
-				"cellPosition": [3, 1],
-				"text": "Unbranded Granite Hat,  Small Plastic Cheese "
-			}, {
-				"bbox": [297, 696, 391, 738],
-				"score": 0.98,
-				"cellPosition": [3, 2],
-				"text": "Unbranded Fresh Car "
-			}, {
-				"bbox": [391, 696, 458, 738],
-				"score": 0.98,
-				"cellPosition": [3, 3],
-				"text": "586.62"
-			}, {
-				"bbox": [458, 696, 522, 738],
-				"score": 0.98,
-				"cellPosition": [3, 4],
-				"text": "9"
-			}, {
-				"bbox": [522, 696, 574, 738],
-				"score": 0.98,
-				"cellPosition": [3, 5],
-				"text": "723.25"
-			}, {
-				"bbox": [72, 738, 106, 781],
-				"score": 0.98,
-				"cellPosition": [4, 0],
-				"text": "548"
-			}, {
-				"bbox": [106, 738, 297, 781],
-				"score": 0.98,
-				"cellPosition": [4, 1],
-				"text": "Practical Metal Car, Generic  Soap "
-			}, {
-				"bbox": [297, 738, 391, 781],
-				"score": 0.98,
-				"cellPosition": [4, 2],
-				"text": "Gloves "
-			}, {
-				"bbox": [391, 738, 458, 781],
-				"score": 0.98,
-				"cellPosition": [4, 3],
-				"text": "475.25"
-			}, {
-				"bbox": [458, 738, 522, 781],
-				"score": 0.98,
-				"cellPosition": [4, 4],
-				"text": "1"
-			}, {
-				"bbox": [522, 738, 574, 781],
-				"score": 0.98,
-				"cellPosition": [4, 5],
-				"text": "838.03"
-			}, {
-				"bbox": [72, 781, 106, 844],
-				"score": 0.98,
-				"cellPosition": [5, 0],
-				"text": "902"
-			}, {
-				"bbox": [106, 781, 297, 844],
-				"score": 0.98,
-				"cellPosition": [5, 1],
-				"text": "Practical Wooden PA  Unbranded  Bike "
-			}, {
-				"bbox": [297, 781, 391, 844],
-				"score": 0.98,
-				"cellPosition": [5, 2],
-				"text": "Small  Wooden  Char "
-			}, {
-				"bbox": [391, 781, 458, 844],
-				"score": 0.98,
-				"cellPosition": [5, 3],
-				"text": "367.49"
-			}, {
-				"bbox": [458, 781, 522, 844],
-				"score": 0.98,
-				"cellPosition": [5, 4],
-				"text": "10"
-			}, {
-				"bbox": [522, 781, 574, 844],
-				"score": 0.98,
-				"cellPosition": [5, 5],
-				"text": "446.08"
-			}, {
-				"bbox": [72, 844, 106, 902],
-				"score": 0.98,
-				"cellPosition": [6, 0],
-				"text": "569"
-			}, {
-				"bbox": [106, 844, 297, 902],
-				"score": 0.98,
-				"cellPosition": [6, 1],
-				"text": "Ergonomic Rubber Shoes, Unbranded Wooden  Computer "
-			}, {
-				"bbox": [297, 844, 391, 902],
-				"score": 0.98,
-				"cellPosition": [6, 2],
-				"text": "Computers"
-			}, {
-				"bbox": [391, 844, 458, 902],
-				"score": 0.98,
-				"cellPosition": [6, 3],
-				"text": "18.08"
-			}, {
-				"bbox": [458, 844, 522, 902],
-				"score": 0.98,
-				"cellPosition": [6, 4],
-				"text": "13"
-			}, {
-				"bbox": [522, 844, 574, 902],
-				"score": 0.98,
-				"cellPosition": [6, 5],
-				"text": "759.29"
-			}, {
-				"bbox": [72, 902, 106, 951],
-				"score": 0.98,
-				"cellPosition": [7, 0],
-				"text": "776"
-			}, {
-				"bbox": [106, 902, 297, 951],
-				"score": 0.98,
-				"cellPosition": [7, 1],
-				"text": "Tasy Frozen Cheese,  Rustic Concrete Tuna "
-			}, {
-				"bbox": [297, 902, 391, 951],
-				"score": 0.98,
-				"cellPosition": [7, 2],
-				"text": "Games"
-			}, {
-				"bbox": [391, 902, 458, 951],
-				"score": 0.98,
-				"cellPosition": [7, 3],
-				"text": "75.72"
-			}, {
-				"bbox": [458, 902, 522, 951],
-				"score": 0.98,
-				"cellPosition": [7, 4],
-				"text": "14"
-			}, {
-				"bbox": [522, 902, 574, 951],
-				"score": 0.98,
-				"cellPosition": [7, 5],
-				"text": "619.96"
-			}, {
-				"bbox": [72, 951, 106, 1007],
-				"score": 0.98,
-				"cellPosition": [8, 0],
-				"text": "597"
-			}, {
-				"bbox": [106, 951, 297, 1007],
-				"score": 0.98,
-				"cellPosition": [8, 1],
-				"text": "Ergonomic Frozen Fish,  TasW Plastic Mouse "
-			}, {
-				"bbox": [297, 951, 391, 1007],
-				"score": 0.98,
-				"cellPosition": [8, 2],
-				"text": "Practical  Rubber  Shoes "
-			}, {
-				"bbox": [391, 951, 458, 1007],
-				"score": 0.98,
-				"cellPosition": [8, 3],
-				"text": "548.62"
-			}, {
-				"bbox": [458, 951, 522, 1007],
-				"score": 0.98,
-				"cellPosition": [8, 4],
-				"text": "13"
-			}, {
-				"bbox": [522, 951, 574, 1007],
-				"score": 0.98,
-				"cellPosition": [8, 5],
-				"text": "665.91"
-			}]
-		}],
-		"billingAddress": [{
-			"text": "Bill Mdress\n1231 Zeol Point, Voeke Helghb\nHolnme, WI, CF\nfefruugi.ar\nPhone: 065498-1594 '(3103, E.nall:\nAlison.Grady90@gmaII.com",
-			"page": 0
-		}],
-		"originAddress": [{
-			"text": "Hansen, Gottlieb and Johns\nImpactful\n1521 VevhuJ Steet, Honln Extension\nEkezodo, CT, JM\ncud.nl\nEqnan: Asa.wunsch@gmallcom, Phone: 1-718485-6225",
-			"page": 0
-		}],
-		"deliveryAddress": [{
-			"text": "Ship to Address\n414 FWb Road, GegJat Road\nTeJawtf, WI, AO\nogesetoj.uy\nEqnall: Doyle64@yahoo.com,\nPhone: 999-731-2964 x8653",
-			"page": 0
-		}],
-		"tax": [{
-			"text": " 16.36%",
-			"page": 0
-		}],
-		"detectedTotal": [{
-			"text": "Ft 1715.86",
-			"page": 0
-		}],
-		"detectedSubtotal": [{
-			"text": null,
-			"page": 0
-		}],
-		"discount": [{
-			"text": " 1588.1",
-			"page": 0
-		}],
-		"dueDate": [{
-			"text": null,
-			"page": 0
-		}],
-		"invoiceDate": [{
-			"text": null,
-			"page": 0
-		}],
-		"invoiceId": [{
-			"text": "k4840206",
-			"page": 0
-		}],
-		"metadata": {
-			"info": "Detected Table",
-			"dimensions": [1200, 919],
-			"numOfPages": 1,
-			"docname": "file-1.png",
-			"text": "(c) Hartmann - Gorczany Invoice\nHansen, Gottlleb and Johns\nAssimilated Impactful Intranet\n1621 Vevhu| Street, Honin Extension\nEkezodo, CT, JM\nzud.nl\n=-mall: Asa. Wunsch@gmall.com, Phone: 1-718-685-6225\nBill to Address 'Ship to Address\n1231 Zeol Point, Voeke Heights 414 Figeb Road, Gegjat Road\nHoinme, WI, CF Tejawif, WI, AO\nfefruugiar ogesetoj.uy\nPhone: 065-498-1594 x3103, E-mall: E-mall: Doyle64@yahoo.com,\nAlison.Grady30@gmail.com Phone: 999-731-2964 x8653\nInvoice No #4840206\ncalculating optimizing vertical,\ncomposite.\nSignature\nDue Datesi14:2094 vat: 16.36%\nDisc.: 1588.1\nPay Total: Ftt715.26"
-		},
-		"status": true
-	}],
-	"statusMessage": "Processed"
+    "_id": "ck2q6j8mg00030rbccpzblctv",
+    "status": true,
+    "statusMessage": "Document Uploaded"
+}
+```
+> To receive response, use this code:
+
+```python
+import requests
+headers = { 
+    "X-ApiKey": 'APIKEY'
+}
+response = requests.get('https://api.koireader.com/v1/order/digitize?id=ck2q6j8mg00030rbccpzblctv', headers=headers)
+print(response.json())
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "data": [
+        {
+            "arbitraryFields": [
+                {
+                    "address_1": "KCS USA, DDC 11100 Valley Blvd #016 ,El Monte, CA 91731, United States Fax: DELIVERY ORDER",
+                }
+            ],
+            "bolID": [
+                {
+                    "page": 0,
+                    "text": " ACHSHEE99944316"
+                }
+            ],
+            "carrier": [
+                {
+                    "page": 0,
+                    "text": "KARTMAN"
+                }
+            ],
+            "city": [
+                {
+                    "page": 0,
+                    "text": "IA 50595 CLARK"
+                }
+            ],
+            "containerDescription": [
+                {
+                    "page": 0,
+                    "text": ""
+                }
+            ],
+            "containerID": [
+                {
+                    "page": 0,
+                    "text": "CAAR3230407\n CMMN9500970\n ECES0040844\n ECES1759046\n ECES1883627\n TKLU9999014"
+                }
+            ],
+            "containerSizeType": [
+                {
+                    "page": 0,
+                    "text": "20 Ft\n 20 Ft\n 20 Ft\n 20 Ft\n 20 Ft\n 20 Ft"
+                }
+            ],
+            "containerVolume": [
+                {
+                    "page": 0,
+                    "text": "5"
+                }
+            ],
+            "containerWeight": [
+                {
+                    "page": 0,
+                    "text": "Total Volume 5,297.20.0 CBF\n +\n PCS: 108Bag\n GLYPHOSATE 95% TECH IN CASE OF SPILL,\n LEAK, EXPOSURE OR ACCIDENT, CALL\n INFOTRAC 24-HR. ER NUMBER 888-323-2200"
+                }
+            ],
+            "date": [
+                {
+                    "page": 0,
+                    "text": "2018-5-8"
+                }
+            ],
+            "deliveryAddress": [
+                {
+                    "addressDetails": {
+                        "city": "Webster City",
+                        "country": "USA",
+                        "name": "LOG DIEST SUPPLY CO/DAS SWITZ ",
+                        "state": "IA",
+                        "streetName": "1404 EAST 325TH ST",
+                        "zipCode": "50595"
+                    },
+                    "page": 0,
+                    "text": "LOG DIEST SUPPLY CO/DAS SWITZ\n 1404 EAST 325TH ST\n WEBSTER CITY IA 50595\n Tel: 113-332-7697 CLARK Fax:\n -"
+                }
+            ],
+            "detectedDocType": [
+                {
+                    "page": 0,
+                    "text": "Import Order"
+                }
+            ],
+            "faxNum": [
+                {
+                    "page": 0,
+                    "text": ""
+                }
+            ],
+            "freightTerms": [
+                {
+                    "page": 0,
+                    "text": ""
+                }
+            ],
+            "houseBolID": [
+                {
+                    "page": 0,
+                    "text": "ACHSHEE9994431"
+                }
+            ],
+            "lastFreeDate": [
+                {
+                    "page": 0,
+                    "text": ""
+                }
+            ],
+            "load": [
+                {
+                    "page": 0,
+                    "text": ""
+                }
+            ],
+            "location": [
+                {
+                    "page": 0,
+                    "text": ""
+                }
+            ],
+            "masterBolID": [
+                {
+                    "page": 0,
+                    "text": "MCDDNNSE988444"
+                }
+            ],
+            "metadata": {
+                "dimensions": [
+                    1200,
+                    849
+                ],
+                "docname": "img2.png",
+                "info": "Detected Table",
+                "numOfPages": 1,
+            },
+            "numPackages": [
+                {
+                    "page": 0,
+                    "text": ""
+                }
+            ],
+            "orderID": [
+                {
+                    "page": 0,
+                    "text": "8880666770"
+                }
+            ],
+            "originAddress": [
+                {
+                    "addressDetails": {
+                        "city": "Edgerton",
+                        "country": "USA",
+                        "name": "SNSF Kansas City Edgerton",
+                        "state": "KS",
+                        "streetName": " 32880 W. 101 Street Edgerton",
+                        "zipCode": "66021"
+                    },
+                    "page": 0,
+                    "text": "SNSF Kansas City Edgerton  - 32880 W. 101 Street Edgerton, KS66021, United States "
+                }
+            ],
+            "pieces": [
+                {
+                    "page": 0,
+                    "text": "18"
+                }
+            ],
+            "placeOfLoading": [
+                {
+                    "page": 0,
+                    "text": "ShangHai, China"
+                }
+            ],
+            "referenceID": [
+                {
+                    "page": 0,
+                    "text": "33330666770"
+                }
+            ],
+            "sealID": [
+                {
+                    "page": 0,
+                    "text": "01144430"
+                }
+            ],
+            "status": true,
+            "street": [
+                {
+                    "page": 0,
+                    "text": "United States"
+                }
+            ],
+            "subBolID": [
+                {
+                    "page": 0,
+                    "text": ""
+                }
+            ],
+            "tables": [
+                {
+                    "cells": [
+                        {
+                            "bbox": [
+                                66,
+                                520,
+                                270,
+                                539
+                            ],
+                            "cellPosition": [
+                                0,
+                                0
+                            ],
+                            "score": 0.98,
+                            "text": "Marks, Numbers & Remarks"
+                        },
+                        {
+                            "bbox": [
+                                270,
+                                520,
+                                496,
+                                539
+                            ],
+                            "cellPosition": [
+                                0,
+                                1
+                            ],
+                            "score": 0.98,
+                            "text": "B/L AWB # or"
+                        },
+                        {
+                            "bbox": [
+                                496,
+                                520,
+                                798,
+                                539
+                            ],
+                            "cellPosition": [
+                                0,
+                                2
+                            ],
+                            "score": 0.98,
+                            "text": "Description of Goods & Weight"
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                539,
+                                270,
+                                569
+                            ],
+                            "cellPosition": [
+                                1,
+                                0
+                            ],
+                            "score": 0.98,
+                            "text": "P/O# 8880666770"
+                        },
+                        {
+                            "bbox": [
+                                270,
+                                539,
+                                496,
+                                569
+                            ],
+                            "cellPosition": [
+                                1,
+                                1
+                            ],
+                            "score": 0.98,
+                            "text": "M B/L No. MCDDNNSE988444 :"
+                        },
+                        {
+                            "bbox": [
+                                496,
+                                539,
+                                798,
+                                569
+                            ],
+                            "cellPosition": [
+                                1,
+                                2
+                            ],
+                            "score": 0.98,
+                            "text": "Total Weight 215,144.3 LBs +"
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                569,
+                                270,
+                                584
+                            ],
+                            "cellPosition": [
+                                2,
+                                0
+                            ],
+                            "score": 0.98,
+                            "text": "Vessel: JOHN GLENN"
+                        },
+                        {
+                            "bbox": [
+                                270,
+                                569,
+                                496,
+                                584
+                            ],
+                            "cellPosition": [
+                                2,
+                                1
+                            ],
+                            "score": 0.98,
+                            "text": "AMS No. AKUKACPH99940996"
+                        },
+                        {
+                            "bbox": [
+                                496,
+                                569,
+                                798,
+                                584
+                            ],
+                            "cellPosition": [
+                                2,
+                                2
+                            ],
+                            "score": 0.98,
+                            "text": "5,297.20.0 CBF Total Volume +"
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                584,
+                                270,
+                                745
+                            ],
+                            "cellPosition": [
+                                3,
+                                0
+                            ],
+                            "score": 0.98,
+                            "text": "Voyage: 093J"
+                        },
+                        {
+                            "bbox": [
+                                270,
+                                584,
+                                496,
+                                745
+                            ],
+                            "cellPosition": [
+                                3,
+                                1
+                            ],
+                            "score": 0.98,
+                            "text": "B/L No. ACHSHEE99944316 : Sub B/L No. : Empty Container Return To =>"
+                        },
+                        {
+                            "bbox": [
+                                496,
+                                584,
+                                798,
+                                745
+                            ],
+                            "cellPosition": [
+                                3,
+                                2
+                            ],
+                            "score": 0.98,
+                            "text": "PCS: 108Bag GLYPHOSATE 95% TECH IN CASE OF SPILL, LEAK, EXPOSURE OR ACCIDENT, CALL INFOTRAC 24-HR. ER NUMBER 888-323-2200"
+                        }
+                    ],
+                    "metadata": {
+                        "bbox": [
+                            66,
+                            520,
+                            798,
+                            745
+                        ],
+                        "page": 0,
+                        "score": 0.98,
+                        "title": "remarksTable"
+                    },
+                    "summary": [
+                        [
+                            "Marks, Numbers & Remarks",
+                            "B/L AWB # or",
+                            "Description of Goods & Weight"
+                        ],
+                        [
+                            "P/O# 8888647740",
+                            "M B/L No. MCDDNNSE988444 :",
+                            "Total Weight 215,144.3 LBs +"
+                        ],
+                        [
+                            "Vessel: JOHN GLENN",
+                            "AMS No. AKUKACPH99940996 :",
+                            "5,297.20.0 CBF Total Volume +"
+                        ],
+                        [
+                            "Voyage: 093J",
+                            "B/L No. ACHSHEE99944316 : Sub B/L No. : Empty Container Return To =>",
+                            "PCS: 108Bag GLYPHOSATE 95% TECH IN CASE OF SPILL, LEAK, EXPOSURE OR ACCIDENT, CALL INFOTRAC 24-HR. ER NUMBER 888-323-2200"
+                        ]
+                    ]
+                },
+                {
+                    "cells": [
+                        {
+                            "bbox": [
+                                66,
+                                795,
+                                196,
+                                817
+                            ],
+                            "cellPosition": [
+                                0,
+                                0
+                            ],
+                            "score": 0.98,
+                            "text": "CONTAINER No."
+                        },
+                        {
+                            "bbox": [
+                                196,
+                                795,
+                                335,
+                                817
+                            ],
+                            "cellPosition": [
+                                0,
+                                1
+                            ],
+                            "score": 0.98,
+                            "text": "SEAL No."
+                        },
+                        {
+                            "bbox": [
+                                335,
+                                795,
+                                448,
+                                817
+                            ],
+                            "cellPosition": [
+                                0,
+                                2
+                            ],
+                            "score": 0.98,
+                            "text": "TYPE"
+                        },
+                        {
+                            "bbox": [
+                                448,
+                                795,
+                                504,
+                                817
+                            ],
+                            "cellPosition": [
+                                0,
+                                3
+                            ],
+                            "score": 0.98,
+                            "text": "PIECE"
+                        },
+                        {
+                            "bbox": [
+                                504,
+                                795,
+                                569,
+                                817
+                            ],
+                            "cellPosition": [
+                                0,
+                                4
+                            ],
+                            "score": 0.98,
+                            "text": "WEIGHT"
+                        },
+                        {
+                            "bbox": [
+                                569,
+                                795,
+                                623,
+                                817
+                            ],
+                            "cellPosition": [
+                                0,
+                                5
+                            ],
+                            "score": 0.98,
+                            "text": "CBM"
+                        },
+                        {
+                            "bbox": [
+                                623,
+                                795,
+                                717,
+                                817
+                            ],
+                            "cellPosition": [
+                                0,
+                                6
+                            ],
+                            "score": 0.98,
+                            "text": "PICK UP No."
+                        },
+                        {
+                            "bbox": [
+                                717,
+                                795,
+                                798,
+                                817
+                            ],
+                            "cellPosition": [
+                                0,
+                                7
+                            ],
+                            "score": 0.98,
+                            "text": "LAST FREE"
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                817,
+                                196,
+                                867
+                            ],
+                            "cellPosition": [
+                                1,
+                                0
+                            ],
+                            "score": 0.98,
+                            "text": "CAAR3230407"
+                        },
+                        {
+                            "bbox": [
+                                196,
+                                817,
+                                335,
+                                867
+                            ],
+                            "cellPosition": [
+                                1,
+                                1
+                            ],
+                            "score": 0.98,
+                            "text": "01144430"
+                        },
+                        {
+                            "bbox": [
+                                335,
+                                817,
+                                448,
+                                867
+                            ],
+                            "cellPosition": [
+                                1,
+                                2
+                            ],
+                            "score": 0.98,
+                            "text": "20 Ft"
+                        },
+                        {
+                            "bbox": [
+                                448,
+                                817,
+                                504,
+                                867
+                            ],
+                            "cellPosition": [
+                                1,
+                                3
+                            ],
+                            "score": 0.98,
+                            "text": "18"
+                        },
+                        {
+                            "bbox": [
+                                504,
+                                817,
+                                569,
+                                867
+                            ],
+                            "cellPosition": [
+                                1,
+                                4
+                            ],
+                            "score": 0.98,
+                            "text": "16,265"
+                        },
+                        {
+                            "bbox": [
+                                569,
+                                817,
+                                623,
+                                867
+                            ],
+                            "cellPosition": [
+                                1,
+                                5
+                            ],
+                            "score": 0.98,
+                            "text": "0.0"
+                        },
+                        {
+                            "bbox": [
+                                623,
+                                817,
+                                717,
+                                867
+                            ],
+                            "cellPosition": [
+                                1,
+                                6
+                            ],
+                            "score": 0.98,
+                            "text": ""
+                        },
+                        {
+                            "bbox": [
+                                717,
+                                817,
+                                798,
+                                867
+                            ],
+                            "cellPosition": [
+                                1,
+                                7
+                            ],
+                            "score": 0.98,
+                            "text": ""
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                867,
+                                196,
+                                898
+                            ],
+                            "cellPosition": [
+                                2,
+                                0
+                            ],
+                            "score": 0.98,
+                            "text": "CMMN9500970"
+                        },
+                        {
+                            "bbox": [
+                                196,
+                                867,
+                                335,
+                                898
+                            ],
+                            "cellPosition": [
+                                2,
+                                1
+                            ],
+                            "score": 0.98,
+                            "text": "PP110046"
+                        },
+                        {
+                            "bbox": [
+                                335,
+                                867,
+                                448,
+                                898
+                            ],
+                            "cellPosition": [
+                                2,
+                                2
+                            ],
+                            "score": 0.98,
+                            "text": "20 Ft"
+                        },
+                        {
+                            "bbox": [
+                                448,
+                                867,
+                                504,
+                                898
+                            ],
+                            "cellPosition": [
+                                2,
+                                3
+                            ],
+                            "score": 0.98,
+                            "text": "18"
+                        },
+                        {
+                            "bbox": [
+                                504,
+                                867,
+                                569,
+                                898
+                            ],
+                            "cellPosition": [
+                                2,
+                                4
+                            ],
+                            "score": 0.98,
+                            "text": "16,265"
+                        },
+                        {
+                            "bbox": [
+                                569,
+                                867,
+                                623,
+                                898
+                            ],
+                            "cellPosition": [
+                                2,
+                                5
+                            ],
+                            "score": 0.98,
+                            "text": "0.0"
+                        },
+                        {
+                            "bbox": [
+                                623,
+                                867,
+                                717,
+                                898
+                            ],
+                            "cellPosition": [
+                                2,
+                                6
+                            ],
+                            "score": 0.98,
+                            "text": ""
+                        },
+                        {
+                            "bbox": [
+                                717,
+                                867,
+                                798,
+                                898
+                            ],
+                            "cellPosition": [
+                                2,
+                                7
+                            ],
+                            "score": 0.98,
+                            "text": ""
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                898,
+                                196,
+                                929
+                            ],
+                            "cellPosition": [
+                                3,
+                                0
+                            ],
+                            "score": 0.98,
+                            "text": "ECES0040844"
+                        },
+                        {
+                            "bbox": [
+                                196,
+                                898,
+                                335,
+                                929
+                            ],
+                            "cellPosition": [
+                                3,
+                                1
+                            ],
+                            "score": 0.98,
+                            "text": "11155088"
+                        },
+                        {
+                            "bbox": [
+                                335,
+                                898,
+                                448,
+                                929
+                            ],
+                            "cellPosition": [
+                                3,
+                                2
+                            ],
+                            "score": 0.98,
+                            "text": "20 Ft"
+                        },
+                        {
+                            "bbox": [
+                                448,
+                                898,
+                                504,
+                                929
+                            ],
+                            "cellPosition": [
+                                3,
+                                3
+                            ],
+                            "score": 0.98,
+                            "text": "18"
+                        },
+                        {
+                            "bbox": [
+                                504,
+                                898,
+                                569,
+                                929
+                            ],
+                            "cellPosition": [
+                                3,
+                                4
+                            ],
+                            "score": 0.98,
+                            "text": "16,265"
+                        },
+                        {
+                            "bbox": [
+                                569,
+                                898,
+                                623,
+                                929
+                            ],
+                            "cellPosition": [
+                                3,
+                                5
+                            ],
+                            "score": 0.98,
+                            "text": "0.0"
+                        },
+                        {
+                            "bbox": [
+                                623,
+                                898,
+                                717,
+                                929
+                            ],
+                            "cellPosition": [
+                                3,
+                                6
+                            ],
+                            "score": 0.98,
+                            "text": ""
+                        },
+                        {
+                            "bbox": [
+                                717,
+                                898,
+                                798,
+                                929
+                            ],
+                            "cellPosition": [
+                                3,
+                                7
+                            ],
+                            "score": 0.98,
+                            "text": ""
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                929,
+                                196,
+                                960
+                            ],
+                            "cellPosition": [
+                                4,
+                                0
+                            ],
+                            "score": 0.98,
+                            "text": "ECES1759046"
+                        },
+                        {
+                            "bbox": [
+                                196,
+                                929,
+                                335,
+                                960
+                            ],
+                            "cellPosition": [
+                                4,
+                                1
+                            ],
+                            "score": 0.98,
+                            "text": "S9899094"
+                        },
+                        {
+                            "bbox": [
+                                335,
+                                929,
+                                448,
+                                960
+                            ],
+                            "cellPosition": [
+                                4,
+                                2
+                            ],
+                            "score": 0.98,
+                            "text": "20 Ft"
+                        },
+                        {
+                            "bbox": [
+                                448,
+                                929,
+                                504,
+                                960
+                            ],
+                            "cellPosition": [
+                                4,
+                                3
+                            ],
+                            "score": 0.98,
+                            "text": "18"
+                        },
+                        {
+                            "bbox": [
+                                504,
+                                929,
+                                569,
+                                960
+                            ],
+                            "cellPosition": [
+                                4,
+                                4
+                            ],
+                            "score": 0.98,
+                            "text": "16,265"
+                        },
+                        {
+                            "bbox": [
+                                569,
+                                929,
+                                623,
+                                960
+                            ],
+                            "cellPosition": [
+                                4,
+                                5
+                            ],
+                            "score": 0.98,
+                            "text": "0.0"
+                        },
+                        {
+                            "bbox": [
+                                623,
+                                929,
+                                717,
+                                960
+                            ],
+                            "cellPosition": [
+                                4,
+                                6
+                            ],
+                            "score": 0.98,
+                            "text": ""
+                        },
+                        {
+                            "bbox": [
+                                717,
+                                929,
+                                798,
+                                960
+                            ],
+                            "cellPosition": [
+                                4,
+                                7
+                            ],
+                            "score": 0.98,
+                            "text": ""
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                960,
+                                196,
+                                991
+                            ],
+                            "cellPosition": [
+                                5,
+                                0
+                            ],
+                            "score": 0.98,
+                            "text": "ECES1883627"
+                        },
+                        {
+                            "bbox": [
+                                196,
+                                960,
+                                335,
+                                991
+                            ],
+                            "cellPosition": [
+                                5,
+                                1
+                            ],
+                            "score": 0.98,
+                            "text": "S9959259"
+                        },
+                        {
+                            "bbox": [
+                                335,
+                                960,
+                                448,
+                                991
+                            ],
+                            "cellPosition": [
+                                5,
+                                2
+                            ],
+                            "score": 0.98,
+                            "text": "20 Ft"
+                        },
+                        {
+                            "bbox": [
+                                448,
+                                960,
+                                504,
+                                991
+                            ],
+                            "cellPosition": [
+                                5,
+                                3
+                            ],
+                            "score": 0.98,
+                            "text": "18"
+                        },
+                        {
+                            "bbox": [
+                                504,
+                                960,
+                                569,
+                                991
+                            ],
+                            "cellPosition": [
+                                5,
+                                4
+                            ],
+                            "score": 0.98,
+                            "text": "16,265"
+                        },
+                        {
+                            "bbox": [
+                                569,
+                                960,
+                                623,
+                                991
+                            ],
+                            "cellPosition": [
+                                5,
+                                5
+                            ],
+                            "score": 0.98,
+                            "text": "0.0"
+                        },
+                        {
+                            "bbox": [
+                                623,
+                                960,
+                                717,
+                                991
+                            ],
+                            "cellPosition": [
+                                5,
+                                6
+                            ],
+                            "score": 0.98,
+                            "text": ""
+                        },
+                        {
+                            "bbox": [
+                                717,
+                                960,
+                                798,
+                                991
+                            ],
+                            "cellPosition": [
+                                5,
+                                7
+                            ],
+                            "score": 0.98,
+                            "text": ""
+                        },
+                        {
+                            "bbox": [
+                                66,
+                                991,
+                                196,
+                                1014
+                            ],
+                            "cellPosition": [
+                                6,
+                                0
+                            ],
+                            "score": 0.98,
+                            "text": "TKLU9999014"
+                        },
+                        {
+                            "bbox": [
+                                196,
+                                991,
+                                335,
+                                1014
+                            ],
+                            "cellPosition": [
+                                6,
+                                1
+                            ],
+                            "score": 0.98,
+                            "text": "S9955349"
+                        },
+                        {
+                            "bbox": [
+                                335,
+                                991,
+                                448,
+                                1014
+                            ],
+                            "cellPosition": [
+                                6,
+                                2
+                            ],
+                            "score": 0.98,
+                            "text": "20 Ft"
+                        },
+                        {
+                            "bbox": [
+                                448,
+                                991,
+                                504,
+                                1014
+                            ],
+                            "cellPosition": [
+                                6,
+                                3
+                            ],
+                            "score": 0.98,
+                            "text": "18"
+                        },
+                        {
+                            "bbox": [
+                                504,
+                                991,
+                                569,
+                                1014
+                            ],
+                            "cellPosition": [
+                                6,
+                                4
+                            ],
+                            "score": 0.98,
+                            "text": "16,265"
+                        },
+                        {
+                            "bbox": [
+                                569,
+                                991,
+                                623,
+                                1014
+                            ],
+                            "cellPosition": [
+                                6,
+                                5
+                            ],
+                            "score": 0.98,
+                            "text": "0.0"
+                        },
+                        {
+                            "bbox": [
+                                623,
+                                991,
+                                717,
+                                1014
+                            ],
+                            "cellPosition": [
+                                6,
+                                6
+                            ],
+                            "score": 0.98,
+                            "text": ""
+                        },
+                        {
+                            "bbox": [
+                                717,
+                                991,
+                                798,
+                                1014
+                            ],
+                            "cellPosition": [
+                                6,
+                                7
+                            ],
+                            "score": 0.98,
+                            "text": ""
+                        }
+                    ],
+                    "metadata": {
+                        "bbox": [
+                            66,
+                            795,
+                            798,
+                            1014
+                        ],
+                        "page": 0,
+                        "score": 0.98,
+                        "title": "containerTable"
+                    },
+                    "summary": [
+                        [
+                            "containerID",
+                            "sealID",
+                            "containerType",
+                            "pieces",
+                            "containerWeight",
+                            "containerVolume",
+                            "pickupID",
+                            "LAST FREE"
+                        ],
+                        [
+                            "CAAR3230407",
+                            "01144430",
+                            "20 Ft",
+                            "18",
+                            "16,265",
+                            "0.0",
+                            "",
+                            ""
+                        ],
+                        [
+                            "CMMN9500970",
+                            "PP110046",
+                            "20 Ft",
+                            "18",
+                            "16,265",
+                            "0.0",
+                            "",
+                            ""
+                        ],
+                        [
+                            "ECES0040844",
+                            "11155088",
+                            "20 Ft",
+                            "18",
+                            "16,265",
+                            "0.0",
+                            "",
+                            ""
+                        ],
+                        [
+                            "ECES1759046",
+                            "S9899094",
+                            "20 Ft",
+                            "18",
+                            "16,265",
+                            "0.0",
+                            "",
+                            ""
+                        ],
+                        [
+                            "ECES1883627",
+                            "S9959259",
+                            "20 Ft",
+                            "18",
+                            "16,265",
+                            "0.0",
+                            "",
+                            ""
+                        ],
+                        [
+                            "TKLU9999014",
+                            "S9955349",
+                            "20 Ft",
+                            "18",
+                            "16,265",
+                            "0.0",
+                            "",
+                            ""
+                        ]
+                    ]
+                }
+            ],
+            "telephoneNumber": [
+                {
+                    "page": 0,
+                    "text": "888-002-8491"
+                }
+            ],
+            "totalWeight": [
+                {
+                    "page": 0,
+                    "text": "+ 215,144.3 LBs\n Total"
+                }
+            ],
+            "vesselName": [
+                {
+                    "page": 0,
+                    "text": "JOHN GLENN"
+                }
+            ],
+            "voyageID": [
+                {
+                    "page": 0,
+                    "text": "093J"
+                }
+            ]
+        }
+    ],
+    "status": true
 }
 ```
 
