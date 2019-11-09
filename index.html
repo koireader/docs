@@ -272,7 +272,7 @@
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span> 
     <span class="s">"X-ApiKey"</span><span class="p">:</span> <span class="s">'APIKEY'</span>
 <span class="p">}</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api.koireader.com/v1/order/digitize'</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s">'file'</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="s">'./invoice.png'</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)},</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api.koireader.com/v1/order/digitize'</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s">'file'</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="s">'./order.png'</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)},</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
 </code></pre>
 <blockquote>
@@ -379,7 +379,7 @@ print(response.json()['invoice.png'])
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
 </code></pre>
 <blockquote>
-<p>Make sure to replace the <code>UNIQUE_ID</code> with the the value of <code>_id</code> which you have received from the upload API call </p>
+<p>Make sure to replace the <code>UNIQUE_ID</code> with the the value of <code>_id</code> which you have received from the request API call</p>
 
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
@@ -1837,7 +1837,7 @@ ID | The ID of the KoiReader to delete
 
 <p><b>Number of Pages</b></p>
 
-<p>Maximum number of supported pages per invoice is 20. Any document with more pages than this will not be processed. You will receive error code <i>413</i> if this happens.</p>
+<p>Maximum number of supported pages per document is 20. Any document with more pages than this will not be processed. You will receive error code <i>413</i> if this happens.</p>
 <h1 id='errors'>Errors</h1>
 <!-- <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
