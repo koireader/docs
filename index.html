@@ -1688,7 +1688,7 @@ print(response.json()['invoice.png'])
 </span></code></pre>
 <p>This endpoint retrieves context and text from the documents .</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>POST   https://api.koireader.com/v1/analyze</code></p>
+<p><code>GET   https://api.koireader.com/v1/order/digitize?id=UNIQUE_ID</code></p>
 
 <!-- ### Query Parameters
 
@@ -1698,7 +1698,7 @@ include_cats | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include KoiReaders that have already been adopted. -->
 
 <aside class="success">
-<p class = 'success-para'>Remember — to use an authenticated KoiReader API !</p>
+<p class = 'success-para'>Remember — to use an authenticated KoiReader API and a valid Document ID!</p>
 </aside>
 
 <!-- ## Get a Specific KoiReader
