@@ -44,7 +44,7 @@ import requests
 headers = { 
     "X-ApiKey": 'APIKEY'
 }
-response = requests.post('https://api.koireader.com/v1/order/digitize', files={'file': open('./invoice.png', 'rb')}, headers=headers)
+response = requests.post('https://api.koireader.com/v1/order/digitize', files={'file': open('./order.png', 'rb')}, headers=headers)
 print(response.json())
 ```
 > Make sure to enter a valid image path and replace <code>APIKEY</code> with your API key .
@@ -151,8 +151,8 @@ headers = {
 }
 response = requests.get('https://api.koireader.com/v1/order/digitize?id=UNIQUE_ID', headers=headers)
 print(response.json())
-```
-> Make sure to replace the <code>UNIQUE_ID</code> with the the value of <code>_id</code> which you have received from the upload API call 
+``` 
+>Make sure to replace the <code>UNIQUE_ID</code> with the the value of <code>_id</code> which you have received from the request API call
 
 > The above command returns JSON structured like this:
 
@@ -1612,7 +1612,7 @@ Note that some of these image formats are "lossy" (for example, JPEG). Reducing 
 
 <b>Number of Pages</b>
 
-<p>Maximum number of supported pages per invoice is 20. Any document with more pages than this will not be processed. You will receive error code <i>413</i> if this happens.</p>
+<p>Maximum number of supported pages per document is 20. Any document with more pages than this will not be processed. You will receive error code <i>413</i> if this happens.</p>
 
 
 
