@@ -1465,7 +1465,7 @@ This endpoint retrieves context and text from the documents .
 
 ### HTTPS Request
 
-`POST   https://api.koireader.com/v1/analyze`
+`GET   https://api.koireader.com/v1/order/digitize?id=UNIQUE_ID`
 
 <!-- ### Query Parameters
 
@@ -1475,7 +1475,7 @@ include_cats | false | If set to true, the result will also include cats.
 available | true | If set to false, the result will include KoiReaders that have already been adopted. -->
 
 <aside class="success">
-<p class = 'success-para'>Remember — to use an authenticated KoiReader API !</p>
+<p class = 'success-para'>Remember — to use an authenticated KoiReader API and a valid Document ID!</p>
 </aside>
 
 <!-- ## Get a Specific KoiReader
